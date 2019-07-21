@@ -12,7 +12,7 @@ class RightLink extends React.Component {
     return (
       <a
         href={this.props.href}
-        class="block text-lg h-10 w-10 flex items-center justify-center leading-none border rounded-full text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white m-2"
+        class="block text-lg h-10 w-10 flex items-center justify-center leading-none border rounded-full text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white lg:m-2 mt-4 mb-2 mx-2"
       >
         <FontAwesomeIcon icon={this.props.icon} />
       </a>
@@ -23,11 +23,13 @@ class RightLink extends React.Component {
 export default class RightLinks extends React.Component {
   render() {
     return (
-      <div class="flex flex-row">
-        <RightLink href="/" icon={faEnvelope} />
-        <RightLink href="/" icon={faLinkedin} />
-        <RightLink href="/" icon={faGithub} />
-        <RightLink href="/" icon={faGitlab} />
+      <div>
+        <div class="flex flex-row justify-center lg:border-none border-t-2 border-white">
+          <RightLink href="/" icon={faEnvelope} />
+          <RightLink href="/" icon={faLinkedin} />
+          <RightLink href="/" icon={faGithub} />
+          <RightLink href="/" icon={faGitlab} />
+        </div>
       </div>
     );
   }
