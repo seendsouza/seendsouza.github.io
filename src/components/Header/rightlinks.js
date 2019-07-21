@@ -25,10 +25,13 @@ export default class RightLinks extends React.Component {
     return (
       <div>
         <div class="flex flex-row justify-center lg:border-none border-t-2 border-white">
-          <RightLink href="/" icon={faEnvelope} />
-          <RightLink href="/" icon={faLinkedin} />
-          <RightLink href="/" icon={faGithub} />
-          <RightLink href="/" icon={faGitlab} />
+          <RightLink href="mailto:sdsou037@uottawa.ca" icon={faEnvelope} />
+          <RightLink
+            href="https://www.linkedin.com/in/sean-d-98131b125"
+            icon={faLinkedin}
+          />
+          <RightLink href="https://github.com/seendsouza" icon={faGithub} />
+          <RightLink href="https://gitlab.com/seendsouza" icon={faGitlab} />
         </div>
       </div>
     );
