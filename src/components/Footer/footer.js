@@ -4,7 +4,7 @@ import BadgeList from "./badgelist";
 export default class Header extends React.Component {
   render() {
     return (
-      <footer class="bg-blue-500 p-3 bottom-0 absolute w-full">
+      <footer class="bg-blue-500 p-3 bottom-0 fixed w-full">
         <BadgeList />
         <div class="justify-center items-center ">
           <p class="flex flex-row justify-center text-white">
