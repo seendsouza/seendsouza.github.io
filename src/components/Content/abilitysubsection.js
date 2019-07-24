@@ -1,10 +1,23 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+
+class Rating extends React.Component {
+  render() {
+    var outputRating = [];
+    for (var i = this.props.value; i > 0; i--) {
+      outputRating.push(<FontAwesomeIcon icon={faStar} />);
+    }
+    return <div>{outputRating}</div>;
+  }
+}
 
 class Ability extends React.Component {
   render() {
     return (
       <div>
-        {this.props.name}, {this.props.rating}
+        {this.props.name}
+        <Rating value={this.props.rating} />
       </div>
     );
   }
