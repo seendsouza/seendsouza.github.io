@@ -45,7 +45,7 @@ export default class SectionAbilities extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div class="container mx-auto lg:w-1/2">
         <AbilitySubsection title="Skills" properties={this.skills} />
         <AbilitySubsection title="Languages" properties={this.languages} />
         <AbilitySubsection title="Tools" properties={this.tools} />

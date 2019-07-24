@@ -6,7 +6,18 @@ class Rating extends React.Component {
   render() {
     var outputRating = [];
     for (var i = this.props.value; i > 0; i--) {
-      outputRating.push(<FontAwesomeIcon icon={faStar} />);
+      outputRating.push(
+        <div class="inline-block text-blue-500">
+          <FontAwesomeIcon icon={faStar} />
+        </div>
+      );
+    }
+    for (var j = 5 - this.props.value; j > 0; j--) {
+      outputRating.push(
+        <div class="inline-block text-blue-200">
+          <FontAwesomeIcon icon={faStar} />
+        </div>
+      );
     }
     return <div>{outputRating}</div>;
   }
@@ -15,8 +26,8 @@ class Rating extends React.Component {
 class Ability extends React.Component {
   render() {
     return (
-      <div>
-        {this.props.name}
+      <div class="flex flex-row md:w-1/2 items-center justify-between px-4 py-1">
+        <div>{this.props.name}</div>
         <Rating value={this.props.rating} />
       </div>
     );
@@ -44,8 +55,8 @@ export default class AbilitySubsection extends React.Component {
     var properties = this.sortDict(this.props.properties);
     return (
       <div>
-        <h2>{this.props.title}</h2>
-        <ul>{properties}</ul>
+        <h2 class="font-bold text-xl text-center py-4">{this.props.title}</h2>
+        <ul class="flex flex-col md:flex-row md:flex-wrap m-2">{properties}</ul>
       </div>
     );
   }
