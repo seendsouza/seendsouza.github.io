@@ -24,7 +24,7 @@ export default class BadgeList extends React.Component {
   render() {
     return (
       <div>
-        <div class="flex flex-row justify-center lg:border-none border-t-2 border-white">
+        <div class="flex flex-row justify-center">
           <Badge href="mailto:sdsou037@uottawa.ca" icon={faEnvelope} />
           <Badge
             href="https://www.linkedin.com/in/sean-d-98131b125"
