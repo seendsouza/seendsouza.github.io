@@ -7,10 +7,14 @@ import Sandwich from "./sandwich";
 export default class Header extends React.Component {
   render() {
     return (
-      <nav class="flex items-center justify-between flex-wrap bg-blue-500 p-3">
+      <nav class="flex items-center absolute justify-between flex-wrap bg-transparent w-full p-3">
         <Logo />
         <Sandwich />
-        <div class={"w-full block flex-grow lg:flex lg:items-center lg:w-auto"}>
+        <div
+          class={
+            "w-full block flex-grow lg:flex lg:items-center justify-between lg:w-auto"
+          }
+        >
           <LeftLinks />
           <RightLinks />
         </div>
