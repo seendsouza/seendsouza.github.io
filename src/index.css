@@ -7548,6 +7548,8 @@ video {
   z-index: auto;
 }
 
+@import "./styles/custom-utilities.css";
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
