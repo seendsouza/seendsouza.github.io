@@ -17,6 +17,7 @@ export default class SectionProjects extends React.Component {
             description="vscout is an open source software suite attempting to simplify and enhance scouting for all robotics teams. This can help teams pick alliance partners, generate strategies against opponents, and know this information in real time."
             alt="vscout open source scouting software suite"
             src={Card0}
+            href="https://github.com/seenrobotics/vscout-cli"
             tags={["flutter", "nosql", "distributed"]}
           />
           <Card
@@ -24,6 +25,7 @@ export default class SectionProjects extends React.Component {
             description="The Sophisticated Educational Assistant Network (SEAN) was created with the mission to create global solidarity in making the world a better place. We do this through our service: by pairing citizens of developed countries to citizens of developing countries."
             alt="Sophissticated Educational Assistant Network (SEAN)"
             src={Card1}
+            href="https://github.com/seendsouza/sean"
             tags={["reactjs", "firebase", "nlp"]}
           />
           <Card
@@ -31,6 +33,7 @@ export default class SectionProjects extends React.Component {
             description="2381C 2018-19's Turning Point code using the PROS library in C++. It includes motion profiling for the autonomous period with PIDs on heading, left drive wheels, and right drive wheels. Points from a Cartesian plane of the field and velocity information are its inputs."
             alt="VEX Robotics Competition Code"
             src={Card2}
+            href="https://gitlab.com/2381-robotics/2381C-V2"
             tags={["rtos", "robotics", "cpp"]}
           />
         </div>
