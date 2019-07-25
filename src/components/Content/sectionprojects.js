@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "./card";
-import Card0 from "../../assets/sectionintro.jpg";
-import Card1 from "../../assets/sectionintro.jpg";
-import Card2 from "../../assets/sectionintro.jpg";
+import Card0 from "../../assets/vscout.jpg";
+import Card1 from "../../assets/seanyorkuhacks.jpg";
+import Card2 from "../../assets/2381cv2.jpg";
 
 export default class SectionProjects extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class SectionProjects extends React.Component {
         <h2 class="flex flex-row justify-center py-12 headline4 font-sans font-bold">
           Projects
         </h2>
-        <div class="flex flex-col lg:flex-row items-center justify-center pb-4">
+        <div class="flex flex-col lg:flex-row items-center lg:items-stretch justify-center pb-4">
           <Card
             title="vscout"
             description="vscout is an open source software suite attempting to simplify and enhance scouting for all robotics teams. This can help teams pick alliance partners, generate strategies against opponents, and know this information in real time."
@@ -30,7 +30,7 @@ export default class SectionProjects extends React.Component {
           />
           <Card
             title="2381C-V2"
-            description="2381C 2018-19's Turning Point code using the PROS library in C++. It includes motion profiling for the autonomous period with PIDs on heading, left drive wheels, and right drive wheels. Points from a Cartesian plane of the field and velocity information are its inputs."
+            description="This is 2381C 2018-19's Turning Point repository. It includes motion profiling for the autonomous period with PIDs on heading, left drive wheels, and right drive wheels. Points from a Cartesian plane of the field and velocity information are its inputs."
             alt="VEX Robotics Competition Code"
             src={Card2}
             href="https://gitlab.com/2381-robotics/2381C-V2"
