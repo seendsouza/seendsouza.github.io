@@ -25,7 +25,12 @@ export default class Card extends React.Component {
       <div class="max-w-sm rounded overflow-hidden shadow-2dp bg-white mx-4 mb-4">
         <img class="w-full" src={this.props.src} alt={this.props.alt} />
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">{this.props.title}</div>
+          <a
+            href={this.props.href}
+            class="font-bold text-xl mb-2 hover:text-red-600"
+          >
+            {this.props.title}
+          </a>
           <p class="text-gray-700 text-base">{this.props.description}</p>
         </div>
         <div class="px-6 py-4">{tagList}</div>
