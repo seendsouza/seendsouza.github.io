@@ -15,7 +15,7 @@ export default class Sandwich extends React.Component {
     return (
       <div class="block lg:hidden">
         <button
-          class="flex items-center mx-3 px-3 py-2 border rounded text-blue-200 border-blue-400 hover:text-white hover:border-white"
+          class="flex items-center mx-3 px-3 py-2 border rounded text-white border-white opacity-75 hover:opacity-100 hover:text-white hover:border-white"
           onClick={this.handleClick}
         >
           <svg
