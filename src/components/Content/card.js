@@ -11,7 +11,16 @@ class Tag extends React.Component {
 }
 
 export default class Card extends React.Component {
+  outputTags(propsTags) {
+    var tags = [];
+    var numberOfTags = propsTags.length;
+    for (var i = 0; i < numberOfTags; i++) {
+      tags.push(<Tag text={propsTags[i]} />);
+    }
+    return tags;
+  }
   render() {
+    var tagList = this.outputTags(this.props.tags);
     return (
       <div class="max-w-sm rounded overflow-hidden shadow-2dp bg-white m-3">
         <img class="w-full" src={this.props.src} alt={this.props.alt} />
@@ -19,11 +28,7 @@ export default class Card extends React.Component {
           <div class="font-bold text-xl mb-2">{this.props.title}</div>
           <p class="text-gray-700 text-base">{this.props.description}</p>
         </div>
-        <div class="px-6 py-4">
-          <Tag text={this.props.tags[0]} />
-          <Tag text={this.props.tags[1]} />
-          <Tag text={this.props.tags[2]} />
-        </div>
+        <div class="px-6 py-4">{tagList}</div>
       </div>
     );
   }
