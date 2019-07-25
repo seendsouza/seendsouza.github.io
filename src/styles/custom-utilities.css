@@ -1,3 +1,5 @@
+/* Material Shadows */
+
 .focus-shadow {
     box-shadow: 0 0 8px rgba(0, 0, 0, .18), 0 8px 16px rgba(0, 0, 0, .36);
 }
@@ -42,4 +44,123 @@
     box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
         0 11px 15px -7px rgba(0, 0, 0, 0.12),
         0 24px 38px 3px rgba(0, 0, 0, 0.20);
+}
+
+/* Material Typography */
+
+.headline1 {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-weight: lighter;
+    letter-spacing: -0.015625;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.headline2 {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    font-weight: lighter;
+    letter-spacing: -0.00833333333;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.headline3 {
+    font-size: 3rem;
+    line-height: 3.125rem;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.headline4 {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 0.00735294117;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.headline5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.headline6 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: medium;
+    letter-spacing: 0.0125;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.subtitle1 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+    letter-spacing: 0.009375;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.subtitle2 {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: medium;
+    letter-spacing: 0.00714285714;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.body1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0.03125;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.body2 {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    letter-spacing: 0.01785714285;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+.caption {
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    letter-spacing: 0.03333333333;
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
+button {
+    font-size: .875rem;
+    line-height: 2.25rem;
+    font-weight: medium;
+    letter-spacing: 0.08928571428;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.overline {
+    font-size: .75rem;
+    line-height: 2rem;
+    font-weight: medium;
+    letter-spacing: 0.16666666666;
+    text-decoration: none;
+    text-transform: uppercase;
 }
