@@ -9,10 +9,9 @@ export default class Header extends React.Component {
     return (
       <nav class="flex items-center absolute justify-between flex-wrap bg-transparent w-full p-3">
         <Logo />
-        <Sandwich />
         <div
           class={
-            "w-full block flex-grow lg:flex lg:items-center justify-between lg:w-auto"
+            "w-full block flex-grow lg:flex items-center lg:justify-between lg:w-auto"
           }
         >
           <LeftLinks />
