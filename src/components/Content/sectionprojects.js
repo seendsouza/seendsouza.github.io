@@ -8,10 +8,10 @@ export default class SectionProjects extends React.Component {
   render() {
     return (
       <div class="bg-red-600">
-        <h2 class="flex flex-row justify-center text-xl font-bold py-3">
+        <h2 class="flex flex-row justify-center py-12 headline4 font-sans font-bold">
           Projects
         </h2>
-        <div class="flex flex-col lg:flex-row items-center justify-center">
+        <div class="flex flex-col lg:flex-row items-center justify-center pb-4">
           <Card
             title="vscout"
             description="vscout is an open source software suite attempting to simplify and enhance scouting for all robotics teams. This can help teams pick alliance partners, generate strategies against opponents, and know this information in real time."

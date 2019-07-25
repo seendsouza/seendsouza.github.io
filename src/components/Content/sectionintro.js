@@ -9,8 +9,10 @@ export default class SectionIntro extends React.Component {
         class="flex flex-1 block justify-center items-center bg-fixed bg-center bg-cover h-screen"
       >
         <div class="block">
-          <h4 class="text-center text-white font-mono text-xl">Hey, I'm</h4>
-          <h1 class="text-center text-white text-4xl font-semibold font-mono">
+          <h4 class="text-center text-white subtitle1 font-display">
+            Hey, I'm
+          </h4>
+          <h1 class="text-center text-white headline3 font-display">
             Sean D'Souza
           </h1>
         </div>

@@ -22,7 +22,7 @@ export default class Card extends React.Component {
   render() {
     var tagList = this.outputTags(this.props.tags);
     return (
-      <div class="max-w-sm rounded overflow-hidden shadow-2dp bg-white m-3">
+      <div class="max-w-sm rounded overflow-hidden shadow-2dp bg-white mx-4 mb-4">
         <img class="w-full" src={this.props.src} alt={this.props.alt} />
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">{this.props.title}</div>
