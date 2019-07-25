@@ -4,7 +4,7 @@ import logo from "../../logo.svg";
 export default class Logo extends React.Component {
   render() {
     return (
-      <div class="flex items-center flex-shrink-0 text-white mx-3 hover:opacity-75 justify-center">
+      <div class="flex items-center flex-shrink-0 text-white mx-3 opacity-75 hover:opacity-100 justify-center">
         <a href="/">
           <img
             src={logo}
