@@ -2,6 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://seendsouza.github.io/website",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -9,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "autoprefixer": "^9.6.0",
+    "gh-pages": "^2.0.1",
     "postcss-cli": "^6.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -24,7 +26,9 @@
     "start": "npm-run-all --parallel watch:css start:react",
     "build": "npm-run-all --parallel build:css build:react",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
