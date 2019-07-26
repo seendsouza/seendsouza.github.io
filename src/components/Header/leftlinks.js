@@ -1,4 +1,5 @@
 import React from "react";
+import Resume from "../../assets/sean-dsouza-resume.pdf";
 
 class LeftLink extends React.Component {
   render() {
@@ -17,7 +18,7 @@ export default class LeftLinks extends React.Component {
   render() {
     return (
       <div class="text-md flex-grow mt-3 mb-1 lg:my-3">
-        <LeftLink href="/" text="Resume" />
+        <LeftLink href={Resume} text="Resume" />
       </div>
     );
   }
