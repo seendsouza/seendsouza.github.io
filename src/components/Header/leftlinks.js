@@ -18,7 +18,6 @@ export default class LeftLinks extends React.Component {
     return (
       <div class="text-md flex-grow mt-3 mb-1 lg:my-3">
         <LeftLink href="/" text="Resume" />
-        <LeftLink href="/" text="Contact" />
       </div>
     );
   }
