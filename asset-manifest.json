@@ -1,21 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.208b36b7.chunk.css",
-    "main.js": "/static/js/main.fad30519.chunk.js",
-    "main.js.map": "/static/js/main.fad30519.chunk.js.map",
+    "main.css": "/static/css/main.32704fad.chunk.css",
+    "main.js": "/static/js/main.e2b0fc32.chunk.js",
+    "main.js.map": "/static/js/main.e2b0fc32.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.8a27a89b.chunk.js": "/static/js/2.8a27a89b.chunk.js",
-    "static/js/2.8a27a89b.chunk.js.map": "/static/js/2.8a27a89b.chunk.js.map",
+    "static/js/2.39e072d1.chunk.js": "/static/js/2.39e072d1.chunk.js",
+    "static/js/2.39e072d1.chunk.js.map": "/static/js/2.39e072d1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.fdc395d8f88a2e22413c51dbe88a3fac.js": "/precache-manifest.fdc395d8f88a2e22413c51dbe88a3fac.js",
+    "precache-manifest.6fbfc121cf91c29b7845cdceb49e5bfb.js": "/precache-manifest.6fbfc121cf91c29b7845cdceb49e5bfb.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.208b36b7.chunk.css.map": "/static/css/main.208b36b7.chunk.css.map",
-    "static/media/2381cv2.jpg": "/static/media/2381cv2.d2865714.jpg",
+    "static/css/main.32704fad.chunk.css.map": "/static/css/main.32704fad.chunk.css.map",
     "static/media/logo.svg": "/static/media/logo.e352d791.svg",
-    "static/media/sean-dsouza-resume.pdf": "/static/media/sean-dsouza-resume.aa48a05b.pdf",
-    "static/media/seanyorkuhacks.jpg": "/static/media/seanyorkuhacks.751b2e8b.jpg",
-    "static/media/sectionintro.jpg": "/static/media/sectionintro.f9b3e105.jpg",
-    "static/media/vscout.jpg": "/static/media/vscout.b97e0a74.jpg"
+    "static/media/sean-dsouza-resume.pdf": "/static/media/sean-dsouza-resume.718609f2.pdf"
   }
 }
