@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35bf0a51346dd3b10efda99326cbb1a5",
+    "revision": "390e210950e05499ecbc107cea0bf7c4",
     "url": "/index.html"
   },
   {
-    "revision": "1f2e724a923d0fe1dc4a",
+    "revision": "53fe6be61826277e0a47",
     "url": "/static/css/main.32704fad.chunk.css"
   },
   {
-    "revision": "c57d91a0454e43a35e20",
-    "url": "/static/js/2.39e072d1.chunk.js"
+    "revision": "740789b700549a751323",
+    "url": "/static/js/2.8a27a89b.chunk.js"
   },
   {
-    "revision": "1f2e724a923d0fe1dc4a",
-    "url": "/static/js/main.4d447a90.chunk.js"
+    "revision": "53fe6be61826277e0a47",
+    "url": "/static/js/main.9cc64889.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.e352d791.svg"
   },
   {
-    "revision": "718609f2e860fd193f1b6de15c52836b",
-    "url": "/static/media/sean-dsouza-resume.718609f2.pdf"
+    "revision": "046b26398e193d45a402d2d4adc1b9f9",
+    "url": "/static/media/sean-dsouza-resume.046b2639.pdf"
   },
   {
     "revision": "751b2e8b37833db418923e96f9f0c6a8",
