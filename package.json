@@ -1,51 +1,44 @@
 {
-  "name": "website",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://seendsouza.github.io",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "autoprefixer": "^9.6.0",
-    "gh-pages": "^2.0.1",
-    "postcss-cli": "^6.1.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "react-spring": "^8.0.27",
-    "tailwindcss": "^1.0.4"
-  },
+  "name": "seendsouza.github.io",
+  "version": "1.0.0",
+  "description": "Sean D'Souza's personal site",
+  "main": "index.js",
   "scripts": {
-    "watch:css": "postcss src/styles/index.css -o src/index.css -w",
-    "build:css": "postcss src/styles/index.css -o src/index.css",
-    "start:react": "react-scripts start",
-    "build:react": "react-scripts build",
-    "start": "npm-run-all --parallel watch:css start:react",
-    "build": "npm-run-all --parallel build:css build:react",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seendsouza/seendsouza.github.io.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Sean D'Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seendsouza/seendsouza.github.io/issues"
+  },
+  "homepage": "https://github.com/seendsouza/seendsouza.github.io#readme",
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "gatsby": "^2.24.23",
+    "gatsby-plugin-emotion": "^4.3.10",
+    "gatsby-plugin-manifest": "^2.4.21",
+    "gatsby-plugin-offline": "^3.2.21",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-typography": "^2.5.10",
+    "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-remark": "^2.8.27",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-lawton": "^0.16.19"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "prettier": "^2.0.5"
   }
 }
