@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `seendsouza`,
+        short_name: `seen`,
         start_url: `/`,
         background_color: `#e7e6e3`,
         theme_color: `#111111`,
