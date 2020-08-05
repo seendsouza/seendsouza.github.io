@@ -4,6 +4,10 @@
   "description": "Sean D'Souza's personal site",
   "main": "index.js",
   "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
