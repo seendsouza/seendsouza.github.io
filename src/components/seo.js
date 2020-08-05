@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-import favicon from "../images/favicon.ico";
-import favicon16 from "../images/favicon16.png";
-import favicon32 from "../images/favicon32.png";
-import favicon64 from "../images/favicon64.png";
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+import favicon from "../images/favicon.ico"
+import favicon16 from "../images/favicon16.png"
+import favicon32 from "../images/favicon32.png"
+import favicon64 from "../images/favicon64.png"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -20,9 +20,9 @@ function SEO({ description, lang, meta, title }) {
         }
       }
     `
-  );
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
@@ -82,20 +82,20 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
-  );
+  )
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-};
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-};
+}
 
-export default SEO;
+export default SEO

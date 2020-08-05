@@ -1,9 +1,9 @@
-import React from "react";
-import { rhythm } from "../utils/typography";
-import Layout from "../components/layout";
+import React from "react"
+import { rhythm } from "../utils/typography"
+import Layout from "../components/layout"
 
 const SocialLinks = ({ data }) => {
-  return data.map((node) => (
+  return data.map(node => (
     <div key={node.url} style={{ paddingBottom: "2em" }}>
       <h3
         style={{
@@ -23,8 +23,8 @@ const SocialLinks = ({ data }) => {
         {node.url}
       </a>
     </div>
-  ));
-};
+  ))
+}
 
 export default function Home() {
   const data = [
@@ -47,8 +47,8 @@ export default function Home() {
         "https://storage.googleapis.com/seendsouza-bucket-0/sean-dsouza-resume.pdf",
       username: "Sean D'Souza",
     },
-  ];
-  console.log(data);
+  ]
+  console.log(data)
   return (
     <Layout>
       <div>
@@ -65,5 +65,5 @@ export default function Home() {
         <p>Site made with Gatsby</p>
       </div>
     </Layout>
-  );
+  )
 }

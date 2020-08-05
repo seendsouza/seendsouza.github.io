@@ -1,9 +1,9 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { css } from "@emotion/core";
-import Icon from "../images/seen-logo.svg";
+import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { css } from "@emotion/core"
+import Icon from "../images/seen-logo.svg"
 
-const ListLink = (props) => (
+const ListLink = props => (
   <li
     css={css`
       display: inline;
@@ -33,9 +33,9 @@ const ListLink = (props) => (
       </div>
     </Link>
   </li>
-);
+)
 
-const LogoLink = (props) => (
+const LogoLink = props => (
   <li
     css={css`
       display: inline;
@@ -62,7 +62,7 @@ const LogoLink = (props) => (
       </div>
     </Link>
   </li>
-);
+)
 export default function Navbar() {
   const data = useStaticQuery(graphql`
     query {
@@ -72,7 +72,7 @@ export default function Navbar() {
         }
       }
     }
-  `);
+  `)
   return (
     <nav
       css={css`
@@ -136,5 +136,5 @@ export default function Navbar() {
         </ListLink>
       </ul>
     </nav>
-  );
+  )
 }
