@@ -33,8 +33,11 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-plugin-less`,
     `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
+    `gatsby-remark-images`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
