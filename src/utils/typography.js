@@ -1,7 +1,7 @@
 import Typography from "typography"
-import lawtonTheme from "typography-theme-lawton"
+import seenTheme from "./seenTheme"
 
-const typography = new Typography(lawtonTheme)
+const typography = new Typography(seenTheme)
 
 export const { scale, rhythm, options } = typography
 export default typography
