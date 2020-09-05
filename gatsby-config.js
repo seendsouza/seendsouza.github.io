@@ -9,10 +9,39 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /src\/images\/.*\.svg/,
+          include: /content\/assets\/.*\.svg/,
         },
       },
     },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    `gatsby-plugin-less`,
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -22,22 +51,10 @@ module.exports = {
         background_color: `#e7e6e3`,
         theme_color: `#111111`,
         display: `standalone`,
-        icon: `src/images/seen-logo-512.png`, // This path is relative to the root of the site.
+        icon: `content/assets/seen-logo-512.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    `gatsby-plugin-less`,
-    `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`,
-    `gatsby-remark-images`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

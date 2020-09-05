@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
-import Icon from "../images/seen-logo.svg"
+import Icon from "../../content/assets/seen-logo.svg"
 
 const ListLink = props => (
   <li
