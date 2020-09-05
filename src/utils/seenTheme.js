@@ -6,18 +6,8 @@ const theme = {
   title: "seen",
   baseFontSize: "22px",
   baseLineHeight: 1.5,
-  googleFonts: [
-    {
-      name: "Raleway",
-      styles: ["800"],
-    },
-    {
-      name: "Lato",
-      styles: ["400", "400i", "700"],
-    },
-  ],
-  headerFontFamily: ["Raleway", "sans-serif"],
-  bodyFontFamily: ["Lato", "sans-serif"],
+  headerFontFamily: ["Inter", "sans-serif"],
+  bodyFontFamily: ["Inter", "sans-serif"],
   headerColor: "hsla(0,0%,0%,1)",
   bodyColor: "hsla(0,0%,0%,0.8)",
   headerWeight: 800,
