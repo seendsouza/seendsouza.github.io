@@ -14,7 +14,9 @@ export default function BlogPost({ data }) {
       <div>
         <header>
           <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>
+            {post.frontmatter.date} • {post.timeToRead} min read
+          </p>
         </header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
@@ -31,6 +33,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
       }
       excerpt
+      timeToRead
     }
   }
 `
