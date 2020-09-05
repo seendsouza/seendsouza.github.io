@@ -56,6 +56,9 @@ module.exports = {
         theme_color: `#111111`,
         display: `standalone`,
         icon: `content/assets/seen-logo-512.png`, // This path is relative to the root of the site.
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
