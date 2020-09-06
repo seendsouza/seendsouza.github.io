@@ -5,20 +5,24 @@ import SEO from "../components/seo"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
+  const { excerpt, timeToRead, html } = post
+  const { title, description, date, image } = post.frontmatter
+  const imagePath = image || image.childImageSharp.fixed.src
   return (
     <Layout>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={title}
+        description={description || excerpt}
+        image={imagePath}
       />
       <div>
         <header>
-          <h1>{post.frontmatter.title}</h1>
+          <h1>{title}</h1>
           <p>
-            {post.frontmatter.date} • {post.timeToRead} min read
+            {date} • {timeToRead} min read
           </p>
         </header>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )
@@ -31,6 +35,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
       excerpt
       timeToRead

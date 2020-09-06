@@ -7,7 +7,7 @@ import favicon16 from "../../content/assets/favicon16.png"
 import favicon32 from "../../content/assets/favicon32.png"
 import favicon64 from "../../content/assets/favicon64.png"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -63,6 +63,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           name: `twitter:card`,
