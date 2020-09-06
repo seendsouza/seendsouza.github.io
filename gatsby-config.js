@@ -37,7 +37,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1080,
+              maxWidth: 1800,
+              showCaptions: true,
+              backgroundColor: `transparent`,
             },
           },
           `gatsby-remark-reading-time`,

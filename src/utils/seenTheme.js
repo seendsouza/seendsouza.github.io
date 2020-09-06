@@ -43,6 +43,12 @@ const theme = {
       "a:hover": {
         textDecoration: "underline",
       },
+      figcaption: {
+        color: gray(26.6),
+        fontSize: rhythm(1 / 2),
+        marginTop: rhythm(blockMarginBottom / 2),
+        marginBottom: rhythm(blockMarginBottom),
+      },
     }
 
     return styles
