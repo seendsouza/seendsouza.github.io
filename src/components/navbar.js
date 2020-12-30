@@ -134,6 +134,15 @@ export default function Navbar() {
         <ListLink to="/">
           <h4>Home</h4>
         </ListLink>
+        <ListLink to="/cv">
+          <h4
+            css={css`
+              margin-left: 1rem;
+            `}
+          >
+            CV
+          </h4>
+        </ListLink>
       </ul>
     </nav>
   )
