@@ -1,0 +1,95 @@
+{
+  "section": "Work Experience",
+  "experiences": [
+    {
+      "title": "System Integrator CI/CD",
+      "is_coop": true,
+      "organization": "Ericsson",
+      "location": "Ottawa, Ontario (remote)",
+      "date_range": "Jan 2021 - Apr 2021 (4 months)",
+      "descriptions": ["Working on the CI/CD infrastructure for Cloud RAN"],
+      "technologies": ["Docker", "Kubernetes"]
+    },
+    {
+      "title": "Frontend Developer",
+      "organization": "Ericsson",
+      "is_coop": true,
+      "location": "Ottawa, Ontario (remote)",
+      "date_range": "May 2020 - Aug 2020 (4 months)",
+      "descriptions": [
+        "Delivered a Proof of Concept (PoC) and release of a new UI (SAP UI) that configures the telecom network monitoring application at runtime",
+        "Wrote a design doc detailing all the shareable components in the SAP UI that increased testability, readability and consistency",
+        "Acted as scrum master by creating epics and stories for the productization of the SAP UI pertaining to RBAC, SSO, DevOps and technical debt",
+        "Established a base for integration and end to end tests with WebDriverIO leading to a reduction in manual testing by 75%",
+        "Created continuously deploying (CD) pipelines for the SAP UI and backend improving visibility, code quality and lead time",
+        "Made presentations about Micro Frontends, and PM+FM collectors from ONAP, Prometheus, OpenStack, telegraf, SNMP",
+        "Simulated real usage of the core product (Service Assurance) to test the performance of the system with the new load from the SAP UI"
+      ],
+      "technologies": [
+        "JavaScript",
+        "Python",
+        "ClojureScript",
+        "Web Components",
+        "WebDriverIO",
+        "Locust",
+        "Docker",
+        "Kubernetes",
+        "GitLab Pipelines"
+      ]
+    },
+
+    {
+      "title": "Full Stack Developer",
+      "organization": "susblob.com",
+      "is_coop": false,
+      "location": "Kingston, Ontario (remote)",
+      "date_range": "Nov 2019 - Apr 2020 (6 months)",
+      "descriptions": [
+        "Architected, designed and developed a full stack e-commerce platform from the ground up (MERN Stack)",
+        "Implemented PayPal Express Checkout, inventory management and shopping cart using an Express REST API",
+        "Adapted client's requirements into a simple user/UX flow and minimalistic design by creating UI mockups in Figma and Adobe XD",
+        "Deployed Kubernetes pods consisting of MongoDB, NGINX (frontend) and Node.js (backend) Docker containers on DigitalOcean"
+      ],
+      "technologies": [
+        "JavaScript (ES10)",
+        "HTML5",
+        "CSS3",
+        "React",
+        "Redux",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "NGINX",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "title": "Junior Software Developer",
+      "organization": "CENX Inc.",
+      "is_coop": true,
+      "location": "Ottawa, Ontario",
+      "date_range": "Jul 2018 - Aug 2018 (2 months)",
+      "descriptions": [
+        "Extended a CLI program written in Python that summarizes gigabytes of FunkLoad test data from XML logs by improving runtime by over 200% using the ElementTree XML API",
+        "Created a graphing program in Python and AWK that visualizes daily system logs (SAR) using NumPy and Pandas}%used when assessing performance metrics",
+        "Refactored, fixed and restored an HTTP and WebSockets integration test that proved the existence of unresponsive endpoints in the product"
+      ],
+      "technologies": [
+        "Python",
+        "AWK",
+        "NumPy",
+        "Pandas",
+        "HTTP",
+        "WebSockets",
+        "XML",
+        "Apache Solr",
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Agile",
+        "Jira"
+      ]
+    }
+  ]
+}
