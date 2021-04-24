@@ -121,7 +121,8 @@ const Home = () => {
               topLeftContent={experience.title}
               topRightContent={experience.date_range}
               bottomLeftContent={
-                experience.organization + (experience.is_coop ? " (Co-Op)" : "")
+                experience.organization +
+                (experience.job_type === "" ? "" : ` (${experience.job_type})`)
               }
               bottomRightContent={experience.location}
               listItems={experience.descriptions}

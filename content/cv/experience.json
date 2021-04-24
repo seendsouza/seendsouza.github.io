@@ -2,18 +2,55 @@
   "section": "Work Experience",
   "experiences": [
     {
-      "title": "System Integrator CI/CD",
-      "is_coop": true,
+      "title": "Analytics Developer",
+      "job_type": "Internship",
+      "organization": "Ericsson",
+      "location": "Ottawa, Ontario (remote)",
+      "date_range": "May 2021 - Aug 2021 (4 months)",
+      "descriptions": [
+        "Architecting and implementing an online metrics anomaly detection and root cause analysis system with seasonal-trend decomposition in Scala"
+      ],
+      "technologies": [
+        "Scala",
+        "Go",
+        "JavaScript",
+        "Flink",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Prometheus",
+        "ElasticSearch"
+      ]
+    },
+    {
+      "title": "Cloud Developer",
+      "job_type": "Co-Op",
       "organization": "Ericsson",
       "location": "Ottawa, Ontario (remote)",
       "date_range": "Jan 2021 - Apr 2021 (4 months)",
-      "descriptions": ["Working on the CI/CD infrastructure for Cloud RAN"],
-      "technologies": ["Docker", "Kubernetes"]
+      "descriptions": [
+        "Building a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware",
+        "Switched message interchange format to Protocol Buffers in C for IPC communication in shared memory radio manager",
+        "Evaluated various full stack observability solutions for pre‑canary characteristic testing environment"
+      ],
+      "technologies": [
+        "C",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kubernetes",
+        "Helm",
+        "Docker",
+        "Jenkins",
+        "Spinnaker",
+        "Prometheus",
+        "Elasticsearch"
+      ]
     },
     {
       "title": "Frontend Developer",
       "organization": "Ericsson",
-      "is_coop": true,
+      "job_type": "Co-Op",
       "location": "Ottawa, Ontario (remote)",
       "date_range": "May 2020 - Aug 2020 (4 months)",
       "descriptions": [
@@ -41,7 +78,7 @@
     {
       "title": "Full Stack Developer",
       "organization": "susblob.com",
-      "is_coop": false,
+      "job_type": "Freelance",
       "location": "Kingston, Ontario (remote)",
       "date_range": "Nov 2019 - Apr 2020 (6 months)",
       "descriptions": [
@@ -67,7 +104,7 @@
     {
       "title": "Junior Software Developer",
       "organization": "CENX Inc.",
-      "is_coop": true,
+      "job_type": "Co-Op",
       "location": "Ottawa, Ontario",
       "date_range": "Jul 2018 - Aug 2018 (2 months)",
       "descriptions": [
