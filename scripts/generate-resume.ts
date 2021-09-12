@@ -192,11 +192,16 @@ const generateLaTeXResume = (doc: Resume): Promise<{}> => {
   )
 }
 
+const latexify = (docStr: string): string => {
+  return docStr.replace("%", "\\%")
+}
+
 const main = async () => {
   try {
-    const filepath = path.resolve(__dirname, "resume/resume.yaml")
+    const filepath = path.resolve(__dirname, "../content/cv/resume.yaml")
     const file = await readFile(filepath)
-    const doc = yaml.load(file.toString()) as Resume
+    const fileStr = latexify(file.toString())
+    const doc = yaml.load(fileStr) as Resume
     const isValid = validateSchema(doc)
     if (isValid) {
       await generateLaTeXResume(doc)
