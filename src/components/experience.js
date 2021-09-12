@@ -13,6 +13,12 @@ export default function Experience({
 }) {
   return (
     <div
+      key={
+        topLeftContent +
+        topRightContent +
+        bottomLeftContent +
+        bottomRightContent
+      }
       css={css`
         margin-left: auto;
         margin-right: auto;
@@ -47,6 +53,7 @@ export default function Experience({
       {listItems.map(listItem => {
         return (
           <div
+            key={listItem}
             css={css`
               margin-bottom: ${rhythm(1 / 2)};
             `}
@@ -62,7 +69,7 @@ export default function Experience({
         `}
       >
         {tags.map(tag => {
-          return <Tag name={tag} />
+          return <Tag name={tag} key={tag} />
         })}
       </div>
     </div>

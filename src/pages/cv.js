@@ -5,7 +5,7 @@ import Experience from "../components/experience"
 import { css } from "@emotion/core"
 import resume from "../../content/cv/resume.yaml"
 
-const Home = () => {
+const CV = () => {
   const mapMonthToNum = month => {
     const monthArr = [
       "January",
@@ -51,7 +51,14 @@ const Home = () => {
 
   return (
     <Layout>
-      <div>
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(24),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
         <h1
           css={css`
             display: inline-block;
@@ -78,6 +85,7 @@ const Home = () => {
           {resume.activities.map(description => {
             return (
               <div
+                key={description}
                 css={css`
                   margin-bottom: ${rhythm(1 / 2)};
                 `}
@@ -113,7 +121,7 @@ const Home = () => {
               relevantCourseWork,
             } = education
             return (
-              <>
+              <div key={education.institution}>
                 <div
                   css={css`
                     margin-bottom: ${rhythm(1 / 2)};
@@ -141,7 +149,7 @@ const Home = () => {
                 >
                   • {"Relevant Coursework: " + relevantCourseWork.join(", ")}
                 </div>
-              </>
+              </div>
             )
           })}
         </div>
@@ -165,6 +173,7 @@ const Home = () => {
           {resume.skills.languages.map(language => {
             return (
               <div
+                key={language}
                 css={css`
                   margin-bottom: ${rhythm(1 / 2)};
                 `}
@@ -186,6 +195,7 @@ const Home = () => {
           {resume.skills.technologies.map(technology => {
             return (
               <div
+                key={technology}
                 css={css`
                   margin-bottom: ${rhythm(1 / 2)};
                 `}
@@ -206,6 +216,7 @@ const Home = () => {
         {resume.experiences.map(experience => {
           return (
             <Experience
+              key={experience.title + experience.company}
               topLeftContent={experience.title}
               topRightContent={datesToString(experience.dates)}
               bottomLeftContent={
@@ -230,6 +241,7 @@ const Home = () => {
         {resume.projects.map(project => {
           return (
             <Experience
+              key={project.name}
               topLeftContent={project.name}
               topRightContent={datesToString(project.dates)}
               listItems={project.description}
@@ -242,4 +254,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default CV
