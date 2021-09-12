@@ -1,0 +1,233 @@
+educations:
+  - degree: BASc in Software Engineering
+    institution: University of Ottawa
+    gpa: 9.05/10
+    location: Ottawa, Ontario
+    dates:
+      start:
+        month: September
+        year: 2019
+      end:
+        month: December
+        year: 2023
+    relevantCourseWork:
+      - Python
+      - Java
+      - Software Engineering
+      - Computer Architecture
+      - Data Structure and Algorithms
+      - Operating Systems
+      - UIs
+      - Databases
+
+skills:
+  languages:
+    - Python
+    - JavaScript
+    - TypeScript
+    - HTML
+    - CSS
+    - C++
+    - Java
+    - Clojure
+    - Go
+    - Rust
+    - Solidity
+
+  technologies:
+    - React
+    - Redux
+    - Web Components
+    - WebDriverIO
+    - Node.js + Express
+    - Flask
+    - MongoDB
+    - Docker
+    - Kubernetes
+    - Android
+    - Linux
+
+experiences:
+  - title: Full Stack Developer Co-Op
+    company: reNFT
+    location: Remote
+    dates:
+      start:
+        month: September
+        year: 2021
+      end:
+        month: December
+        year: 2021
+    description: []
+    skills:
+      - JavaScript
+      - React
+      - ethers
+      - The Graph
+      - GraphQL
+  - title: Cloud + Analytics Developer, Co-Op+Intern
+    company: Ericsson (Cloud RAN)
+    location: Ottawa, Ontario (remote)
+    dates:
+      start:
+        month: January
+        year: 2021
+      end:
+        month: September
+        year: 2021
+    description:
+      - Architecting and implementing an online metrics anomaly detection system
+      - Building a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware
+      - Switched message interchange format to Protocol Buffers in C for IPC communication in shared memory radio manager
+      - Evaluated various full stack observability and root cause analysis solutions for pre-canary characteristic testing environment
+    skills:
+      - Python
+      - Go
+      - Java
+      - JavaScript
+      - C
+      - Kubernetes
+      - Helm
+      - Docker
+      - Jenkins
+      - Prometheus
+      - InfluxDB
+      - MongoDB
+      - Elasticsearch
+  - title: Frontend Developer, Co-Op
+    company: Ericsson (CENX)
+    location: Ottawa, Ontario (remote)
+    dates:
+      start:
+        month: May
+        year: 2020
+      end:
+        month: August
+        year: 2020
+    description:
+      - Delivered a Proof of Concept (PoC) and release of a new UI that configures the telecom network monitoring application at runtime as a team of 5
+      - Wrote a design doc detailing all the shareable components in the new UI that increased testability, readability and consistency
+      - Acted as scrum master by creating epics and stories for the productization of the new UI pertaining to RBAC, SSO, DevOps and technical debt
+      - Made presentations about Micro Frontends, and PM+FM collectors from ONAP, Prometheus, OpenStack, telegraf, SNMP
+    skills:
+      - JavaScript
+      - Python
+      - ClojureScript
+      - Web Components
+      - WebDriverIO
+      - Locust
+      - Docker
+      - Kubernetes
+      - GitLab Pipelines
+  - title: Full Stack Developer, Freelance
+    company: Susblob Customs
+    location: Remote
+    dates:
+      start:
+        month: November
+        year: 2019
+      end:
+        month: May
+        year: 2021
+    description:
+      - Designed and developed a full stack e-commerce platform from the ground up (MERN Stack)
+      - Implemented PayPal Express Checkout, Stripe Checkout, inventory management, orders and shopping cart using an Express REST API
+      - Tune core web vitals to achieve scores of >90 in performance, accessibility, best practices and SEO
+    skills:
+      - TypeScript
+      - JavaScript
+      - HTML
+      - CSS
+      - React
+      - Redux
+      - Node.js
+      - Express
+      - MongoDB
+      - NGINX
+      - Docker
+      - Kubernetes
+  - title: Junior Software Developer, Co-Op
+    company: CENX
+    location: Ottawa, Ontario
+    dates:
+      start:
+        month: July
+        year: 2018
+      end:
+        month: August
+        year: 2018
+    description:
+      - Extended a CLI program written in Python that summarizes gigabytes of FunkLoad test data from XML logs by improving runtime by over 200\%
+      - Created a graphing program in Python and AWK that visualizes daily system logs (SAR) using NumPy and Pandas}%used when assessing performance metrics
+      - Refactored, fixed and restored an HTTP and WebSockets integration test that proved the existence of unresponsive endpoints in the product
+    skills:
+      - Python
+      - AWK
+      - NumPy
+      - pandas
+      - WebSockets
+      - Solr
+      - Docker
+
+projects:
+  - name: Decentralized Mahjong
+    moduleName: github.com/fensandemajiang/fensandemajiang
+    link: https://github.com/fensandemajiang/fensandemajiang
+    skills:
+      - React
+      - Ceramic (IDX, 3ID)
+      - ThreadDB
+      - WebRTC
+      - IPFS
+    dates:
+      start:
+        month: August
+        year: 2021
+      end:
+        month: Present
+        year: 2021
+    description:
+      - Creating a Mahjong platform that runs decentralized (IDX identity management, P2P player communication, IPFS game logs)
+  - name: openvtuber
+    moduleName: github.com/virtuber/openvtuber
+    link: https://github.com/virtuber/openvtuber
+    skills:
+      - Python
+      - TypeScript
+      - React
+      - Three.js
+      - GLTF + VRM
+      - PyTorch
+      - dlib
+      - Caffe
+    dates:
+      start:
+        month: December
+        year: 2020
+      end:
+        month: May
+        year: 2021
+    description:
+      - Leading a team of 6 to create software that controls a virtual character from your own movements with just camera data
+  - name: VEX Robot (Team 2381C)
+    moduleName: gitlab.com/2381-robotics/2381C-V2
+    link: https://gitlab.com/2381-robotics/2381C-V2
+    skills:
+      - C++
+      - Python
+      - RTOS
+    dates:
+      start:
+        month: November
+        year: 2018
+      end:
+        month: February
+        year: 2019
+    description:
+      - Engineered an autonomous program using motion profiling, PID feedback control and driver control in C++, Python and the PROS library
+      - Won Excellence, Innovate, Service and Tournament Champions awards at various regional competitions
+
+activities:
+  - Substitute Teaching Assistant (TA) for Trilogy Education/2U Inc. at Carleton University for Full Stack Flex Bootcamp (June 2020)
+  - Mentor for and speaker at SETHacks; participant at 6 hackathons including HackFS, Hack the North and Hack the 6ix
+  - Mentor and software advisor for world-class high school VEX robotics organization 2381 Kernel Bye consisting of 3 teams
