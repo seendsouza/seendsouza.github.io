@@ -224,8 +224,8 @@ const CV = () => {
                 (experience.jobType === "" ? "" : ` (${experience.jobType})`)
               }
               bottomRightContent={experience.location}
-              listItems={experience.description}
-              tags={experience.skills}
+              listItems={experience.description.points}
+              tags={experience.skills.skills}
             />
           )
         })}
