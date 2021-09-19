@@ -48,10 +48,10 @@ skills:
     - Linux
 
 experiences:
-  - title: Full Stack Developer Co-Op
+  - title: Full Stack Developer, Co-Op
     company: reNFT
     jobType: Co-Op
-    location: Remote
+    location: Arizona, USA (Remote)
     dates:
       start:
         month: September
@@ -59,14 +59,27 @@ experiences:
       end:
         month: December
         year: 2021
-    description: []
+    description:
+      excludeList: []
+      points:
+        - Created Discord bot serving >13000 users that adds and removes roles (RBAC) based on ownership of a token or rentership of an NFT
+        - Deployed the reNFT Solidity smart contract on to Polygon
     skills:
-      - JavaScript
-      - React
-      - ethers
-      - The Graph
-      - GraphQL
-  - title: Cloud + Analytics Developer, Co-Op+Intern
+      enabled: true
+      skills:
+        - Python
+        - TypeScript
+        - JavaScript
+        - Rust
+        - Solidity
+        - GraphQL
+        - React
+        - GraphQL
+        - Ethereum
+        - Solana
+        - Polygon
+        - NFTs (ERC-721)
+  - title: DevOps + Full Stack Developer, Co-Op+Intern
     company: Ericsson (Cloud RAN)
     jobType: Co-Op+Internship
     location: Ottawa, Ontario (remote)
@@ -78,24 +91,30 @@ experiences:
         month: September
         year: 2021
     description:
-      - Architecting and implementing an online metrics anomaly detection system
-      - Building a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware
-      - Switched message interchange format to Protocol Buffers in C for IPC communication in shared memory radio manager
-      - Evaluated various full stack observability and root cause analysis solutions for pre-canary characteristic testing environment
+      excludeList: []
+      points:
+        - Created a time-series anomaly detection system for application and infrastructure metrics with 4 other team members
+        - Developed a UI using Web Components and an API in Go to display and store anomalies
+        - Created Helm charts, Dockerfiles and continously packaged, versioned and deployed them using GitLab Pipelines
+        - Building a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware
+        - Switched message interchange format to Protocol Buffers in C for IPC communication in shared memory radio manager
+        - Evaluated various full stack observability and root cause analysis solutions for pre-canary characteristic testing environment
     skills:
-      - Python
-      - Go
-      - Java
-      - JavaScript
-      - C
-      - Kubernetes
-      - Helm
-      - Docker
-      - Jenkins
-      - Prometheus
-      - InfluxDB
-      - MongoDB
-      - Elasticsearch
+      enabled: true
+      skills:
+        - Python
+        - Go
+        - Java
+        - JavaScript
+        - C
+        - Kubernetes
+        - Helm
+        - Docker
+        - Jenkins
+        - Prometheus
+        - InfluxDB
+        - MongoDB
+        - GitLab Pipelines
   - title: Frontend Developer, Co-Op
     company: Ericsson (CENX)
     jobType: Co-Op
@@ -108,24 +127,28 @@ experiences:
         month: August
         year: 2020
     description:
-      - Delivered a Proof of Concept (PoC) and release of a new UI that configures the telecom network monitoring application at runtime as a team of 5
-      - Wrote a design doc detailing all the shareable components in the new UI that increased testability, readability and consistency
-      - Acted as scrum master by creating epics and stories for the productization of the new UI pertaining to RBAC, SSO, DevOps and technical debt
-      - Made presentations about Micro Frontends, and PM+FM collectors from ONAP, Prometheus, OpenStack, telegraf, SNMP
+      excludeList: []
+      points:
+        - Delivered a Proof of Concept (PoC) and release of a new UI that configures the telecom network monitoring application at runtime as a team of 5
+        - Wrote a design doc detailing all the shareable components in the new UI that increased testability, readability and consistency
+        - Acted as scrum master by creating epics and stories for the productization of the new UI pertaining to RBAC, SSO, DevOps and technical debt
+        - Made presentations about Micro Frontends, and PM+FM collectors from ONAP, Prometheus, OpenStack, telegraf, SNMP
     skills:
-      - JavaScript
-      - Python
-      - ClojureScript
-      - Web Components
-      - WebDriverIO
-      - Locust
-      - Docker
-      - Kubernetes
-      - GitLab Pipelines
+      enabled: true
+      skills:
+        - JavaScript
+        - Python
+        - ClojureScript
+        - Web Components
+        - WebDriverIO
+        - Locust
+        - Docker
+        - Kubernetes
+        - GitLab Pipelines
   - title: Full Stack Developer, Freelance
     company: Susblob Customs
     jobType: Freelance
-    location: Remote
+    location: Kingston, Ontario (remote)
     dates:
       start:
         month: November
@@ -134,22 +157,25 @@ experiences:
         month: May
         year: 2021
     description:
-      - Designed and developed a full stack e-commerce platform from the ground up (MERN Stack)
-      - Implemented PayPal Express Checkout, Stripe Checkout, inventory management, orders and shopping cart using an Express REST API
-      - Tune core web vitals to achieve scores of >90 in performance, accessibility, best practices and SEO
+      excludeList: []
+      points:
+        - Designed and developed a full stack e-commerce platform from the ground up (MERN Stack) with all core web vitals >90
+        - Implemented PayPal Express Checkout, Stripe Checkout, inventory management, orders and shopping cart using an Express REST API
     skills:
-      - TypeScript
-      - JavaScript
-      - HTML
-      - CSS
-      - React
-      - Redux
-      - Node.js
-      - Express
-      - MongoDB
-      - NGINX
-      - Docker
-      - Kubernetes
+      enabled: true
+      skills:
+        - TypeScript
+        - JavaScript
+        - HTML
+        - CSS
+        - React
+        - Redux
+        - Node.js
+        - Express
+        - MongoDB
+        - NGINX
+        - Docker
+        - Kubernetes
   - title: Junior Software Developer, Co-Op
     company: CENX
     jobType: Co-Op
@@ -162,17 +188,21 @@ experiences:
         month: August
         year: 2018
     description:
-      - Extended a CLI program written in Python that summarizes gigabytes of FunkLoad test data from XML logs by improving runtime by over 200%
-      - Created a graphing program in Python and AWK that visualizes daily system logs (SAR) using NumPy and Pandas used when assessing performance
-      - Refactored, fixed and restored an HTTP and WebSockets integration test that proved the existence of unresponsive endpoints in the product
+      excludeList: []
+      points:
+        - Extended a CLI program written in Python that summarizes gigabytes of FunkLoad test data from XML logs by improving runtime by over 200%
+        - Created a graphing program in Python and AWK that visualizes daily system logs (SAR) using NumPy and Pandas used when assessing performance
+        - Refactored, fixed and restored an HTTP and WebSockets integration test that proved the existence of unresponsive endpoints in the product
     skills:
-      - Python
-      - AWK
-      - NumPy
-      - pandas
-      - WebSockets
-      - Solr
-      - Docker
+      enabled: false
+      skills:
+        - Python
+        - AWK
+        - NumPy
+        - pandas
+        - WebSockets
+        - Solr
+        - Docker
 
 projects:
   - name: Decentralized Mahjong
@@ -235,4 +265,3 @@ projects:
 activities:
   - Substitute Teaching Assistant (TA) for Trilogy Education/2U Inc. at Carleton University for Full Stack Flex Bootcamp (June 2020)
   - Mentor for and speaker at SETHacks; participant at 6 hackathons including HackFS, Hack the North and Hack the 6ix
-  - Mentor and software advisor for world-class high school VEX robotics organization 2381 Kernel Bye consisting of 3 teams

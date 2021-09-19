@@ -23,8 +23,14 @@ export interface Experience {
   company: string
   location: string
   dates: Dates
-  description: string[]
-  skills: string[]
+  description: {
+    excludeList: number[]
+    points: string[]
+  }
+  skills: {
+    enabled: true
+    skills: string[]
+  }
 }
 
 export interface Project {

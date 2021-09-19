@@ -133,13 +133,19 @@ const generateExperienceLaTeX = (experiences: Experience[]): string => {
   const entries: Entry[] = experiences.map(
     (experience: Experience): Entry => {
       const skills =
-        "\\underline{Leveraged knowledge in:} " + experience.skills.join(", ")
+        "\\underline{Leveraged knowledge in:} " +
+        experience.skills.skills.join(", ")
+      const points = experience.description.points.filter((_, idx) => {
+        return !experience.description.excludeList.includes(idx)
+      })
       return {
         farLeft: experience.title,
         midLeft: experience.company,
         midRight: experience.location,
         farRight: datesToString(experience.dates),
-        points: [...experience.description, skills],
+        points: experience.skills.enabled
+          ? [...points, skills]
+          : experience.description.points,
       }
     }
   )
