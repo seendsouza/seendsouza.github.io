@@ -1,5 +1,16 @@
+metadata:
+  firstName: Sean
+  lastName: D'Souza
+  email: seangdsouza@gmail.com
+  phone: 16138646409
+  location:
+    city: Ottawa
+    province: Ontario
+    country: Canada
 educations:
   - degree: BASc in Software Engineering
+    degreeType: Bachelor's Degree
+    discipline: Engineering
     institution: University of Ottawa
     gpa: 9.05/10
     location: Ottawa, Ontario
@@ -50,8 +61,9 @@ skills:
 experiences:
   - title: Full Stack Developer, Co-Op
     company: reNFT
+    isCurrent: true
     jobType: Co-Op
-    location: Arizona, USA (Remote)
+    location: Tempe, Arizona (Remote)
     dates:
       start:
         month: September
@@ -62,8 +74,9 @@ experiences:
     description:
       excludeList: []
       points:
-        - Created Discord bot serving >13000 users that adds and removes roles (RBAC) based on ownership of a token or rentership of an NFT
-        - Deployed the reNFT Solidity smart contract on to Polygon
+        - Created Discord bot serving over 13000 users that adds and removes roles (RBAC) based on ownership of a token or rentership of an NFT
+        - Updated and deployed the reNFT Solidity smart contract on to Polygon
+        - Developed program for collateral-free renting of NFTs on the Solana blockchain using Rust
     skills:
       enabled: true
       skills:
@@ -81,6 +94,7 @@ experiences:
         - NFTs (ERC-721)
   - title: DevOps + Full Stack Developer, Co-Op+Intern
     company: Ericsson (Cloud RAN)
+    isCurrent: false
     jobType: Co-Op+Internship
     location: Ottawa, Ontario (remote)
     dates:
@@ -91,12 +105,12 @@ experiences:
         month: September
         year: 2021
     description:
-      excludeList: []
+      excludeList: [3]
       points:
         - Created a time-series anomaly detection system for application and infrastructure metrics with 4 other team members
         - Developed a UI using Web Components and an API in Go to display and store anomalies
         - Created Helm charts, Dockerfiles and continously packaged, versioned and deployed them using GitLab Pipelines
-        - Building a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware
+        - Assembled a system that visualizes PM data, logs, microservice versions and test results from >50 test clusters with specialized hardware
         - Switched message interchange format to Protocol Buffers in C for IPC communication in shared memory radio manager
         - Evaluated various full stack observability and root cause analysis solutions for pre-canary characteristic testing environment
     skills:
@@ -117,6 +131,7 @@ experiences:
         - GitLab Pipelines
   - title: Frontend Developer, Co-Op
     company: Ericsson (CENX)
+    isCurrent: false
     jobType: Co-Op
     location: Ottawa, Ontario (remote)
     dates:
@@ -127,12 +142,15 @@ experiences:
         month: August
         year: 2020
     description:
-      excludeList: []
+      excludeList: [4,5,6]
       points:
         - Delivered a Proof of Concept (PoC) and release of a new UI that configures the telecom network monitoring application at runtime as a team of 5
         - Wrote a design doc detailing all the shareable components in the new UI that increased testability, readability and consistency
         - Acted as scrum master by creating epics and stories for the productization of the new UI pertaining to RBAC, SSO, DevOps and technical debt
         - Made presentations about Micro Frontends, and PM+FM collectors from ONAP, Prometheus, OpenStack, telegraf, SNMP
+        - Established a base for integration and end to end tests with WebDriverIO leading to a reduction in manual testing by 75%
+        - Created continuously deploying (CD) pipelines for the new UI and backend improving visibility, code quality and lead time
+        - Simulated real usage of the core product (Service Assurance) to test the performance of the system with the new load from the new UI
     skills:
       enabled: true
       skills:
@@ -147,6 +165,7 @@ experiences:
         - GitLab Pipelines
   - title: Full Stack Developer, Freelance
     company: Susblob Customs
+    isCurrent: false
     jobType: Freelance
     location: Kingston, Ontario (remote)
     dates:
@@ -157,10 +176,12 @@ experiences:
         month: May
         year: 2021
     description:
-      excludeList: []
+      excludeList: [2,3]
       points:
         - Designed and developed a full stack e-commerce platform from the ground up (MERN Stack) with all core web vitals >90
         - Implemented PayPal Express Checkout, Stripe Checkout, inventory management, orders and shopping cart using an Express REST API
+        - Adapted client’s requirements into a simple user/UX flow and minimalistic design by creating UI mockups in Figma and Adobe XD
+        - Deployed Kubernetes pods consisting of MongoDB, NGINX (frontend) and Node.js (backend) Docker containers on DigitalOcean
     skills:
       enabled: true
       skills:
@@ -178,6 +199,7 @@ experiences:
         - Kubernetes
   - title: Junior Software Developer, Co-Op
     company: CENX
+    isCurrent: false
     jobType: Co-Op
     location: Ottawa, Ontario
     dates:

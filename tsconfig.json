@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true
-  }
+  },
+  "types": ["node", "webdriverio"],
+  "include": ["*.ts"]
 }

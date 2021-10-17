@@ -6,8 +6,22 @@ export interface Dates {
   start: Date
   end: Date
 }
+export interface Location {
+  city: string
+  province: string
+  country: string
+}
+export interface Metadata {
+  firstName: string
+  lastName: string
+  email: string
+  phone: number
+  location: Location
+}
 export interface Education {
   degree: string
+  degreeType: string
+  discipline: string
   institution: string
   gpa: string
   location: string
@@ -21,6 +35,7 @@ export interface Skills {
 export interface Experience {
   title: string
   company: string
+  isCurrent: boolean
   location: string
   dates: Dates
   description: {
@@ -43,6 +58,7 @@ export interface Project {
 }
 
 export interface Resume {
+  metadata: Metadata
   educations: Education[]
   skills: Skills
   experiences: Experience[]

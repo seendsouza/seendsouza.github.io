@@ -1,6 +1,7 @@
 import yaml from "js-yaml"
 import { readFile, writeFile } from "fs/promises"
 import path from "path"
+import { validateSchema, mapMonthToNum } from "./common"
 import type {
   Dates,
   Education,
@@ -12,39 +13,6 @@ import type {
   CVEntrySection,
   CVBulletSection,
 } from "./types"
-
-const validateSchema = (doc: Resume): boolean => {
-  // TODO: Validate against a JSON Schema Draft 07
-  return true
-}
-
-const mapMonthToNum = (month: string) => {
-  const monthArr = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ]
-
-  if (month === "Present") {
-    const d = new Date()
-    return mapMonthToNum(monthArr[d.getMonth()])
-  }
-  const idx = monthArr.indexOf(month)
-  if (idx >= 0) {
-    return idx
-  } else {
-    throw new Error(`Invalid month ${month}`)
-  }
-}
 
 const datesToString = (dates: Dates): string => {
   const deltaMonths =
@@ -188,7 +156,7 @@ const generateLaTeXResume = (doc: Resume): Promise<{}> => {
   const filesToCreate = {
     "education.tex": generateEducationLaTeX(doc.educations),
     "skills.tex": generateSkillsLaTeX(doc.skills),
-    "experiences.tex": generateExperienceLaTeX(doc.experiences),
+    "experiences.tex": latexify(generateExperienceLaTeX(doc.experiences)),
     "projects.tex": generateProjectsLaTeX(doc.projects),
     "activities.tex": generateActivitiesLaTeX(doc.activities),
   }
