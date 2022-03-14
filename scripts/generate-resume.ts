@@ -12,6 +12,7 @@ import type {
   Entry,
   CVEntrySection,
   CVBulletSection,
+  ResumeOptions,
 } from "./types"
 
 const datesToString = (dates: Dates): string => {
@@ -97,26 +98,31 @@ const generateSkillsLaTeX = (skills: Skills): string => {
   })
 }
 
-const generateExperienceLaTeX = (experiences: Experience[]): string => {
-  const entries: Entry[] = experiences.map(
-    (experience: Experience): Entry => {
-      const skills =
-        "\\underline{Leveraged knowledge in:} " +
-        experience.skills.skills.join(", ")
-      const points = experience.description.points.filter((_, idx) => {
-        return !experience.description.excludeList.includes(idx)
-      })
-      return {
-        farLeft: experience.title,
-        midLeft: experience.company,
-        midRight: experience.location,
-        farRight: datesToString(experience.dates),
-        points: experience.skills.enabled
-          ? [...points, skills]
-          : experience.description.points,
+const generateExperienceLaTeX = (
+  experiences: Experience[],
+  isOfficial: boolean
+): string => {
+  const entries: Entry[] = experiences
+    .filter(e => !e.exclude)
+    .map(
+      (experience: Experience): Entry => {
+        const skills =
+          "\\underline{Leveraged knowledge in:} " +
+          experience.skills.skills.join(", ")
+        const points = experience.description.points.filter((_, idx) => {
+          return !experience.description.excludeList.includes(idx)
+        })
+        return {
+          farLeft: isOfficial ? experience.officialTitle : experience.title,
+          midLeft: experience.company,
+          midRight: experience.location,
+          farRight: datesToString(experience.dates),
+          points: experience.skills.enabled
+            ? [...points, skills]
+            : experience.description.points,
+        }
       }
-    }
-  )
+    )
   return generateCVEntriesLaTeX({
     sectionTitle: "Work Experience",
     entries: entries,
@@ -152,11 +158,13 @@ const saveFile = (filename: string, contents: string): Promise<void> => {
   )
 }
 
-const generateLaTeXResume = (doc: Resume): Promise<{}> => {
+const generateLaTeXResume = (doc: Resume, opts: ResumeOptions): Promise<{}> => {
   const filesToCreate = {
     "education.tex": generateEducationLaTeX(doc.educations),
     "skills.tex": generateSkillsLaTeX(doc.skills),
-    "experiences.tex": latexify(generateExperienceLaTeX(doc.experiences)),
+    "experiences.tex": latexify(
+      generateExperienceLaTeX(doc.experiences, opts.isOfficial)
+    ),
     "projects.tex": generateProjectsLaTeX(doc.projects),
     "activities.tex": generateActivitiesLaTeX(doc.activities),
   }
@@ -170,15 +178,22 @@ const latexify = (docStr: string): string => {
   return docStr.replace("%", "\\%")
 }
 
+const getResumeOptions = (argv: string[]) => {
+  return {
+    isOfficial: argv[2] && argv[2] == "--official",
+  }
+}
+
 const main = async () => {
   try {
+    const resumeOptions = getResumeOptions(process.argv)
     const filepath = path.resolve(__dirname, "../content/cv/resume.yaml")
     const file = await readFile(filepath)
     const fileStr = latexify(file.toString())
     const doc = yaml.load(fileStr) as Resume
     const isValid = validateSchema(doc)
     if (isValid) {
-      await generateLaTeXResume(doc)
+      await generateLaTeXResume(doc, resumeOptions)
     }
   } catch (e) {
     console.error(e)

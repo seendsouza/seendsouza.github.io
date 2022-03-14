@@ -59,7 +59,9 @@ skills:
     - Linux
 
 experiences:
-  - title: Full Stack Developer, Co-Op
+  - title: Full Stack Developer, Co-Op+Intern
+    officialTitle: Consultant, Co-Op+Intern
+    exclude: false
     company: reNFT
     isCurrent: true
     jobType: Co-Op
@@ -69,13 +71,14 @@ experiences:
         month: September
         year: 2021
       end:
-        month: December
-        year: 2021
+        month: April
+        year: 2022
     description:
       excludeList: []
       points:
         - Created Discord bot serving over 13000 users that adds and removes roles (RBAC) based on ownership of a token or rentership of an NFT
         - Updated and deployed the reNFT Solidity smart contract on to Polygon
+        - Created backend API for their V2 platform
         - Developed program for collateral-free renting of NFTs on the Solana blockchain using Rust
     skills:
       enabled: true
@@ -93,6 +96,8 @@ experiences:
         - Polygon
         - NFTs (ERC-721)
   - title: DevOps + Full Stack Developer, Co-Op+Intern
+    officialTitle: Co-op Cloud RAN CI/CD \& SI, Co-Op+Intern
+    exclude: false
     company: Ericsson (Cloud RAN)
     isCurrent: false
     jobType: Co-Op+Internship
@@ -130,6 +135,8 @@ experiences:
         - MongoDB
         - GitLab Pipelines
   - title: Frontend Developer, Co-Op
+    officialTitle: Frontend Software Developer Co-op, Co-Op
+    exclude: false
     company: Ericsson (CENX)
     isCurrent: false
     jobType: Co-Op
@@ -164,6 +171,8 @@ experiences:
         - Kubernetes
         - GitLab Pipelines
   - title: Full Stack Developer, Freelance
+    officialTitle: Full Stack Developer
+    exclude: true
     company: Susblob Customs
     isCurrent: false
     jobType: Freelance
@@ -198,6 +207,8 @@ experiences:
         - Docker
         - Kubernetes
   - title: Junior Software Developer, Co-Op
+    officialTitle: Junior Software Developer - Co-op, Co-Op
+    exclude: false
     company: CENX
     isCurrent: false
     jobType: Co-Op

@@ -34,6 +34,8 @@ export interface Skills {
 }
 export interface Experience {
   title: string
+  officialTitle: string
+  exclude: boolean
   company: string
   isCurrent: boolean
   location: string
@@ -82,4 +84,8 @@ export interface CVEntrySection {
 export interface CVBulletSection {
   sectionTitle: string
   bullets: string[]
+}
+
+export interface ResumeOptions {
+  isOfficial: boolean
 }

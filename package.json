@@ -10,6 +10,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:latex": "ts-node scripts/generate-resume.ts",
+    "compile:latex-official": "ts-node scripts/generate-resume.ts --official",
     "greenhouse": "ts-node scripts/greenhouse.ts"
   },
   "repository": {
