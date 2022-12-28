@@ -59,11 +59,39 @@ skills:
     - Linux
 
 experiences:
+  - title: Software Engineer, Co-Op
+    officialTitle: Software Engineer, Co-Op
+    exclude: false
+    company: Rippling
+    isCurrent: true
+    jobType: Co-Op
+    location: San Francisco, California
+    dates:
+      start:
+        month: May
+        year: 2022
+      end:
+        month: September
+        year: 2022
+    description:
+      excludeList: [1]
+      points:
+        - Bootstrapped a new product that will generate millions in ARR with a growing team in Django
+        - Upgraded frontend codebases from Node 12 to 18 with +1m lines improving hot reload time by 3x and redued CI build times by >100s
+    skills:
+      enabled: true
+      skills:
+        - Python
+        - TypeScript
+        - JavaScript
+        - Django
+        - Rest Framework
+        - React
   - title: Full Stack Developer, Co-Op+Intern
     officialTitle: Consultant, Co-Op+Intern
     exclude: false
     company: reNFT
-    isCurrent: true
+    isCurrent: false
     jobType: Co-Op
     location: Tempe, Arizona (Remote)
     dates:
