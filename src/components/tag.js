@@ -1,6 +1,6 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export default function Experience({ name }) {
   return (

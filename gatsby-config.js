@@ -28,7 +28,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    `gatsby-plugin-less`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -42,7 +41,6 @@ module.exports = {
               backgroundColor: `transparent`,
             },
           },
-          `gatsby-remark-reading-time`,
         ],
       },
     },

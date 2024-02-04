@@ -2,7 +2,7 @@ import React from "react"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import Experience from "../components/experience"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import resume from "../../content/cv/resume.yaml"
 
 const CV = () => {

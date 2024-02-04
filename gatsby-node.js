@@ -1,4 +1,5 @@
 const path = require(`path`)
+const readingTime = require("reading-time")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -9,6 +10,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: `slug`,
       value: slug,
+    })
+    createNodeField({
+      node,
+      name: `readingTime`,
+      value: readingTime(node.rawMarkdownBody),
+    })
+  } else if (node.internal.type === `Mdx`) {
+    createNodeField({
+      node,
+      name: `readingTime`,
+      value: readingTime(node.rawBody),
     })
   }
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
 import Tag from "./tag"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 export default function Experience({
   topLeftContent,

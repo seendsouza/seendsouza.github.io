@@ -2,7 +2,7 @@ import React from "react"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import seen from "../../content/assets/seen-alpha.png"
 
 const SocialLinks = ({ data }) => {
