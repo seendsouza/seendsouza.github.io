@@ -1,0 +1,19 @@
+---
+import Inter from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
+import "@fontsource-variable/inter"
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>{title ? title : "Sean D'Souza"}</title>
+<meta name="generator" content={Astro.generator} />
+<link rel="preload" href={Inter} as="font" type="font/woff2" crossorigin />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+<meta name="description" content="Sean D'Souza's personal website" />

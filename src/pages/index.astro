@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+---
+
+<BaseLayout title="Sean D'Souza">
+  <main>
+    <svg
+      class="astro-a"
+      width="495"
+      height="623"
+      viewBox="0 0 442.24 1002.12"
+      <!--
+      viewBox="0 0 495 623"
+      --
+    >
+      fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" >
+      <polygon
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        points="221.12 1002.12 2.83 781 2.83 426.64 198.63 618.27 198.44 783.83 221.12 800.84 246.63 781 246.63 605.24 0 361.44 0 220.41 0 220.41 221.12 0 439.4 221.12 439.4 575.47 243.6 383.85 243.8 218.28 221.12 201.27 195.6 221.12 195.6 396.88 442.24 640.67 442.24 779.58 221.12 1002.12"
+        fill="url(#paint0_linear_1805_24383)"></polygon>
+      <defs>
+        <linearGradient
+          id="paint0_linear_1805_24383"
+          x1="247.358"
+          y1="0"
+          x2="247.358"
+          y2="622.479"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-opacity="0.9"></stop>
+          <stop offset="1" stop-opacity="0.2"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+    <h1>I'm <span class="text-gradient">Sean D'Souza</span></h1>
+    <p class="instructions">
+      <strong>TODO:</strong> Tweak the below so more personalized and has icons.<br
+      />
+      <strong>TODO:</strong> Tweak the below so has n most recent blog posts.<br
+      />
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card href="/blog/" title="Blog" body="" />
+      <Card href="/cv/" title="CV" body="" />
+      <Card href="https://github.com/seendsouza" title="GitHub" body="" />
+      <Card
+        href="https://www.linkedin.com/in/seendsouza/"
+        title="LinkedIn"
+        body=""
+      />
+      <Card
+        href="https://storage.googleapis.com/seendsouza-bucket-0/sean-dsouza-resume.pdf"
+        title="Resume"
+        body=""
+      />
+    </ul>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>

@@ -1,60 +1,31 @@
 {
-  "name": "seendsouza.github.io",
-  "version": "1.0.0",
-  "description": "Sean D'Souza's personal site",
+  "name": "seendsouza",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "clean": "gatsby clean",
-    "dev": " ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "serve": "gatsby serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:latex": "ts-node scripts/generate-resume.ts",
-    "compile:latex-official": "ts-node scripts/generate-resume.ts --official",
-    "greenhouse": "ts-node scripts/greenhouse.ts"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "bun run lint:prettier && bun run lint:types",
+    "lint:types": "tsc --noEmit",
+    "lint:prettier": "prettier . --write --cache --list-different"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seendsouza/seendsouza.github.io.git"
-  },
-  "author": "Sean D'Souza",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/seendsouza/seendsouza.github.io/issues"
-  },
-  "homepage": "https://github.com/seendsouza/seendsouza.github.io#readme",
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "compass-vertical-rhythm": "^1.4.5",
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-emotion": "^8.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-offline": "^6.13.1",
-    "gatsby-plugin-react-helmet": "^6.13.1",
-    "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-typography": "^5.13.1",
-    "gatsby-remark-images": "^7.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-remark": "^6.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "gray-percentage": "^2.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.23",
-    "reading-time": "^1.5.0",
-    "typeface-inter": "^3.18.1",
-    "typography": "^0.16.24",
-    "typography-breakpoint-constants": "^0.16.19"
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/markdoc": "^0.8.3",
+    "@astrojs/rss": "^4.0.4",
+    "@astrojs/sitemap": "^3.0.5",
+    "@fontsource-variable/inter": "^5.0.16",
+    "astro": "^4.3.2",
+    "date-fns": "^3.3.1",
+    "sharp": "^0.33.2",
+    "typescript": "^5.3.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.9",
-    "babel-plugin-import": "^1.13.8",
-    "js-yaml": "^4.1.0",
-    "prettier": "^3.2.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "webdriverio": "^8.29.7"
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

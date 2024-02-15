@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { format } from "date-fns";
+export type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+export async function getStaticPaths() {
+  const blog = await getCollection("blog");
+
+  return blog.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+const { post } = Astro.props;
+const { data, render } = post;
+const { Content } = await render();
+---
+
+<BaseLayout title={`${data.title} | Sean D'Souza`}>
+  <header>
+    <time datetime={data.publishDate.toISOString()}>
+      {format(data.publishDate, "MMMM d, yyyy")}
+    </time>
+    <h1>{data.title}</h1>
+  </header>
+  <img src={data.coverImage} width="300" />
+  <article class="prose">
+    <Content />
+  </article>
+</BaseLayout>
