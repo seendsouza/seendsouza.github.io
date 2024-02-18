@@ -8,21 +8,21 @@ import favicon32 from "../../content/assets/favicon32.png"
 import favicon64 from "../../content/assets/favicon64.png"
 
 function SEO({ description, lang, meta, title, image }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
         }
       }
-    `
-  )
+    }
+  `)
 
   const metaDescription = description || site.siteMetadata.description
+  const imageUrl = `${site.siteMetadata.siteUrl}${image}`
 
   return (
     <Helmet
@@ -66,11 +66,15 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: imageUrl,
+        },
+        {
+          property: `twitter:image`,
+          content: imageUrl,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,

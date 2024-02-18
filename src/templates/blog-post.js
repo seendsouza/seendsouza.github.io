@@ -8,7 +8,7 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
   const { excerpt, timeToRead, html } = post
   const { title, description, date, image } = post.frontmatter
-  const imagePath = image || image.childImageSharp.fixed.src
+  const imagePath = image.childImageSharp.fixed.src
   return (
     <Layout>
       <div
@@ -39,7 +39,7 @@ export default function BlogPost({ data }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
