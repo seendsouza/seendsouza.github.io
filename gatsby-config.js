@@ -1,8 +1,10 @@
+const siteUrl = process.env.URL || `https://seendsouza.com`
 module.exports = {
   siteMetadata: {
     title: `Sean D'Souza`,
     description: `Sean D'Souza's personal website'`,
     author: `Sean D'Souza`,
+    siteUrl,
   },
   plugins: [
     {
@@ -76,6 +78,12 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
         omitGoogleFont: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        resolveSiteUrl: () => siteUrl,
       },
     },
   ],
