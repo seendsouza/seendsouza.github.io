@@ -17,7 +17,7 @@ reNFT's upcoming V3 solution and ZEROTWO aim to solve this by having renters hav
 1. There is a risk of lenders not getting back their asset. Even with collateral, many would consider losing an asset non-ideal (especially if the asset goes up in value).
 2. Renters need to have large amounts of money to rent , even though they will generally get it back. This significantly increases the barrier to entry for these games.
 
-An ideal solution would require renters to "own" an asset for the duration of a rental, paying only the rental price without collateral, while ensuring lenders can get their asset back when a rental is a complete. We narrowed possible solutions to: a custodial solution (ZEROTWO) and a non-custodial solution (V3)
+An ideal solution would require renters to "own" an asset for the duration of a rental, paying only the rental price without collateral, while ensuring lenders can get their asset back when a rental is complete. We narrowed possible solutions to: a custodial solution (ZEROTWO) and a non-custodial solution (V3)
 
 ## Introduction to ZEROTWO
 
