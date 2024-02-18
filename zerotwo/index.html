@@ -1,0 +1,914 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:137.5%/1.5 'Inter',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Inter',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,1);font-family:'Inter',sans-serif;font-weight:800;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;font-size:0.85rem;line-height:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}blockquote{margin-left:1rem;margin-right:1rem;margin-top:1rem;padding-bottom:0;padding-left:1rem;padding-right:0;padding-top:0;margin-bottom:1rem;color:hsla(0,0%,0%,0.7340000000000001);border-left:4px solid #999;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1rem / 2);margin-top:calc(1rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1rem / 2);margin-top:calc(1rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}@media only screen and (max-width:480px){html{font-size:80%;line-height:19.2px;}}a{font-weight:bold;color:#00f;text-decoration:none;}a:hover{text-decoration:underline;}figcaption{color:hsla(0,0%,0%,0.7340000000000001);font-size:0.75rem;margin-top:0.5rem;margin-bottom:1rem;}</style><meta name="generator" content="Gatsby 5.13.3"/><meta name="theme-color" content="#111111"/><meta data-react-helmet="true" name="description" content="Asset rentals on blockchains need to change for mass adoption. They need to be zero-integration and collateral-free. Here&#x27;s why: First, some…"/><meta data-react-helmet="true" property="og:title" content="ZEROTWO: Zero Effort Rentals &amp; Off-Chain Transactional Wallet Operations"/><meta data-react-helmet="true" property="og:description" content="Asset rentals on blockchains need to change for mass adoption. They need to be zero-integration and collateral-free. Here&#x27;s why: First, some…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:image" content="[object Object]"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Sean D&#x27;Souza"/><meta data-react-helmet="true" name="twitter:title" content="ZEROTWO: Zero Effort Rentals &amp; Off-Chain Transactional Wallet Operations"/><meta data-react-helmet="true" name="twitter:description" content="Asset rentals on blockchains need to change for mass adoption. They need to be zero-integration and collateral-free. Here&#x27;s why: First, some…"/><style data-href="/styles.d36983fc3f4a0fd363e1.css" data-identity="gatsby-global-css">html{background-color:#e7e6e3}body{color:#111;margin:0;padding:0}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:100;src:url(/static/Inter-Thin-de9194d1cf4ce0dd3b563b378492781d.woff2) format("woff2"),url(/static/Inter-Thin-fcc912460dcaea1ee8d47a16a9a92ad7.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:100;src:url(/static/Inter-ThinItalic-ec0fcc99e9d879db77bab7f13c2ae1e3.woff2) format("woff2"),url(/static/Inter-ThinItalic-6b5565d76adf0660b40695238c3bce39.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:200;src:url(/static/Inter-ExtraLight-21843ac6e40e9c4fd1c63c56f39852d5.woff2) format("woff2"),url(/static/Inter-ExtraLight-7b7bd05c50e77a1dea5f2693277155d0.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:200;src:url(/static/Inter-ExtraLightItalic-04abe79a58b830b0543642e656fbd8e1.woff2) format("woff2"),url(/static/Inter-ExtraLightItalic-a7a00555699d20ff4912fd4dfcf91cf4.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:300;src:url(/static/Inter-Light-51f4d17560f77b8a0b38e9f83fd000b2.woff2) format("woff2"),url(/static/Inter-Light-c08cfeeb313675a65efca3140707651e.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:300;src:url(/static/Inter-LightItalic-8942ebe85375956847c920423e4dffba.woff2) format("woff2"),url(/static/Inter-LightItalic-203b9b31308f80781b13db48b07eaf78.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:400;src:url(/static/Inter-Regular-6cc68d6b835a3dd06e7ebda5aee33cb1.woff2) format("woff2"),url(/static/Inter-Regular-8398b3762d7b06fc3b8c7969a770ad65.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:400;src:url(/static/Inter-Italic-e2f52803eb133261314fa3d1fcbcfe9f.woff2) format("woff2"),url(/static/Inter-Italic-635afeed439bcb3e4823b9ff421a3996.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:500;src:url(/static/Inter-Medium-ba68c34a21c5751a283817dcb7fe719e.woff2) format("woff2"),url(/static/Inter-Medium-f5549f68ca7db479bc7da17065186563.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:500;src:url(/static/Inter-MediumItalic-d29ef50afbad4a10753088689035b41c.woff2) format("woff2"),url(/static/Inter-MediumItalic-2812ec5af03af477a4923dd095f7f932.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:600;src:url(/static/Inter-SemiBold-625474d6ebbfe4e3b0ae2b6509093acd.woff2) format("woff2"),url(/static/Inter-SemiBold-25b1ffc958707046234286ceef569477.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:600;src:url(/static/Inter-SemiBoldItalic-c632fb9629c16866b4b6bae9c7b96d57.woff2) format("woff2"),url(/static/Inter-SemiBoldItalic-80d799bef2a34b9d253c1a10a354e804.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:700;src:url(/static/Inter-Bold-a808c21aaa221f6d24f986adfd675076.woff2) format("woff2"),url(/static/Inter-Bold-1c3dfbb05cd4ae02710ec31af64c40d6.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:700;src:url(/static/Inter-BoldItalic-974439652aea7e778bf7b2e4dc1a4970.woff2) format("woff2"),url(/static/Inter-BoldItalic-32e2b20f6958d2d2b42dcc91e486ce90.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:800;src:url(/static/Inter-ExtraBold-1ca2a2cfb6b4cad40001166328957046.woff2) format("woff2"),url(/static/Inter-ExtraBold-30c3d891c030615a228a7d6469967a76.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:800;src:url(/static/Inter-ExtraBoldItalic-a0a103e5c1d773038d855264864acc2a.woff2) format("woff2"),url(/static/Inter-ExtraBoldItalic-cd6682866c7a0fead62a37f353758370.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:900;src:url(/static/Inter-Black-ef2d12b9f04d00e319f24c12e8f7aff7.woff2) format("woff2"),url(/static/Inter-Black-e258f99875304915b846db851f7fccf4.woff) format("woff")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:900;src:url(/static/Inter-BlackItalic-a1ea21b039cc259b6452e981b7bf0fe1.woff2) format("woff2"),url(/static/Inter-BlackItalic-70d2cf354617b8400370d557a10f7ffe.woff) format("woff")}@font-face{font-named-instance:"Regular";font-display:swap;font-family:Inter var;font-style:normal;font-weight:100 900;src:url(/static/Inter-roman.var-b65534c52236842619456e68aeced3ca.woff2) format("woff2")}@font-face{font-named-instance:"Italic";font-display:swap;font-family:Inter var;font-style:italic;font-weight:100 900;src:url(/static/Inter-italic.var-b27297c148a7ef314ce20bc617a6106b.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter var experimental;font-style:oblique 0deg 10deg;font-weight:100 900;src:url(/static/Inter.var-9df5db385c3370707c5bf0018996ebca.woff2) format("woff2")}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 12)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="icon" href="/favicon-32x32.png?v=986573ef1cffaa15e00e4f966f0e614e" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=986573ef1cffaa15e00e4f966f0e614e"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=986573ef1cffaa15e00e4f966f0e614e"/><title data-react-helmet="true">ZEROTWO: Zero Effort Rentals &amp; Off-Chain Transactional Wallet Operations | Sean D&#x27;Souza</title><link data-react-helmet="true" rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAACMuAAAjLgAAAAEAAAABAADj5ucA5enqAMTGxwDEx8gA5ejpAObp6gDCxcYAQkNDAENERADCxMUAQUJCAA0NDQBERUUAxcjJAMnLzABCQkIALCwsACorKwBHSEgAzdDQAOTn6ADn6usAoqSlABMTEwBhY2MAW1xdABUVFQCqrKwApqmpAGRlZQBcXV0ADAwMABcXFwCpq6wA0NPUAF1eXgAODg4ASktLAIGCgwAaGhsAtbi5AIGDgwBdXl8AXl9fAHl7ewAiIiIAqKqrAKaoqQCjpaUAys3OAENDRADDxscA5ejqAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAMDNAAAAAAAAAAAAAAABQMIMjMFAAAAAAAAAAAABA0MCwsyAgQAAAAAAAAAFBMSCxEQCwwxFAAAAAAAAAUbGgsZGAsXMBUAAAAAAAAFISAfHh0LGi8FAAAAAAAABSEaJyYlJCMiFAAAAAAAAAUuLSwrFyopKAUAAAAAAAAFKCkqFyssLS4FAAAAAAAAFCIjJCUmJxohBQAAAAAAAAUcGgsdHh8gIQUAAAAAAAAVFhcLGBkLGhsFAAAAAAAABA4PCxARCxITFAAAAAAAAAAECQoLCwwNBAAAAAAAAAAAAAUGBwgDBQAAAAAAAAAAAAAAAQIDBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/><link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAolBMVEXn5uPq6eXHxsTIx8Tp6OXq6ebGxcJDQ0JEREPFxMJCQkENDQ1FRUTJyMXMy8lCQkIsLCwrKypISEfQ0M3o5+Tr6uelpKITExNjY2FdXFsVFRWsrKqpqaZlZWRdXVwMDAwXFxesq6nU09BeXl0ODg5LS0qDgoEbGhq5uLWDg4FfXl1fX157e3kiIiKrqqipqKalpaPOzcpEQ0PHxsPq6OX///8iEXnOAAAAAWJLR0Q13rbZawAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+QIAxcsHFedlQ8AAACYSURBVBjTTY/pEoIwDISRtooGlKNYKHLfp4q+/7PpqET2V/LNZrKrKB9tVEKVldh2pxH23+n+AKAb6KHHE5gW2A7/AfcswPNBBssRu0gIozhJF8CzvCirWiJgTduJfhgnBNM49KJrGwSprKuyyDOOIImjEOQVHYEE3wNxc5cvjg2WCfqdY1RDB5jVVT1GtPmxKvf2EPL8Ti+o2AtlWciLbgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wOC0wM1QyMzo0MzoyMCswMDowMGmaqBoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDgtMDRUMDY6NDk6NDUrMDA6MDCaCimEAAAAAElFTkSuQmCC"/><link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXn5uPo5+Tm5eKWlpSXlpWRkY8cHBwdHR2VlJKRkI4PDw8fHx6QkI4dHRwREREfHx+YmJaQj44gICCamZfl5OGQj40SEhIhISGcm5np6OWdnZttbWtpaGcQEBAiIiKrq6hxcG8NDQ0WFhawr62hoJ4NDQ6BgH/q6eZycXAODg6uraufnpyCgYBxcXB5eHevrqzIx8VFREQVFRWpqKa0tLEfHh7g39zHxsRGRkVMTEvLysiVlJMeHh6VlZPKycdIR0fMy8kODw+Af34gIB+enpzLysdJSUhKSknMy8ibm5khISBxcW+joqCXlpSWlZOUlJKTk5GXl5X////EIS7nAAAAAWJLR0RSDWAtkAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+QIAxcrMCoEbysAAAE/SURBVDjLhdNZV4JQEAfwC5bYWBfTQlHRcEfcd9z3rWz5/l+muXZ6KAecB3j4/86de5iBsb8lScyrJNl3I3vmt34l4JXfKQBBn3t+/wCcgxpyyx/9mKMIR8ibPj2LXNNQRGNErsfPeSJpoEil9UvwYuLxmWwOj+D5QvESlCwByrYAVoUA1fwVUDu3qMe5C5AaTbxkq93pAg1Yrz8AbjjD0RjoFhN7OgMOzjykwoIAxeVqvdmi2O0PR5MCFfN42O9QbDfr1ZICCxzT3EExm9oTnQAWh/Fo6BgcBv0eIwGHbqfdwlezIdGA83g9g0+zprsAzS4LkK9eAVaJAAUxLC2XPbd4JfYhncIhGMmEWCn17RIwFov+rpx6YlRJkfDP0gbfmUvhmLj4Wsy1fEGA8QfzqIDi//TKmfx1kq/83//jb4lHKtkrOrJ2AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA4LTAzVDIzOjQzOjIwKzAwOjAwaZqoGgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wOC0wNFQwNjo0OTo0NSswMDowMJoKKYQAAAAASUVORK5CYII="/><link data-react-helmet="true" rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpFBMVEXn5uPp6OXo5+Srq6isq6mmpaMmJiYnJyepqKYPDw8pKSmrqqilpaMnJyYRERErKiqsrKmlpKInJiYsKyuurastLSywr62ko6EuLi2xsK4mJiUODg8vLy+zsrDq6OWjo6EmJSUODg4wMDC0s7Hq6ebp5+SjoqAlJSUyMTG2tbOioqAzMzK3trSioZ8lJSQQEBA0NDO5uLahoZ8XFxdlZGNnZmUYGBg1NTW6ubbKycYtLS1lZWPi4d7h4N1SUlENDQ1GRUXa2dfq6eW/vrwfHx9/f33r6udfX10xMTHT0tDAv7wgICB+fnzm5eJeXl0yMjLU09BeXVxdXVxdXVvHxsQpKChdXFvl5OGVlJN/fn0MDAyXlpQgHx92dXSop6WYmJYqKimpqaenpqQoKCjg39zS0c+amZchISEpKSgqKirT0s9cXFu8u7icm5kiIiEoKCempqQsLCswLy82NjW7u7idnZsjIyKvrqyfnpwjIyOxsa4wMC+3trOgoJ4kJCQyMjE2NTXOzcoODw+wsK0sLCyurqsrKyutrKqvr62qqqeqqaf///9AbbtZAAAAAWJLR0SL8m9H4AAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+QIAxcqL74XU58AAAK4SURBVFjD1dfXVxpBFAfgvRMsF8MoUSMGS1YmUaMGiDV2ESv2Lir23sXe08tfnU3YhufkZGY5eXCf2Iffd4bduzP3StJ/vgASy5MntoQESEpOSU1AgKQURHuaZQGeOpBSTM+wKIDzmZJXhMwsSwI4k//kFSH7uQUBcrS8IrhyhQXIeaHnKXXn5RcI5gtfmvKUykUeJpJ/9bo4Lq8IJaUCAnnzMK8IZeXcAql4q+W9iF5N8Pl5hXd6nlZWVdfoa6itI1zP7329rGcaGpua9buW1jYeIdAe9OpAR6fU1aKXQ3cPDwC9IQPoY/0DBjA4ZAUYfvzAiChQYH4LCjAqvIKxcTQDE6KANDkV1AR5WnkGYVFAkmZmVUGeYxDRNxZuAKT5UCzkXVgEWFpGMWBlFcjaeiyEGxGAxU0UAcjW9g4ju3tqaP8AwHaIIsDQUfSYkZNTVXA4oeDM5RYBBsNRPyPnF6qQXAjs8koWAVD2XTNyc6sKxRWEee5kEYDKdx5GKtSdEW9vCLv2ySIAla8uGRSqJYAX54T5o2ERgLpdZwFwOlTh9ISw4+iRCEDx0AZwsK8Ke7uE7WxviQAUN5UyjGyoN+trBFZXOPIGQHF5SSnDhdjHjaF5ie+ENQClBCLA5tRtHWdnuPJmgIaH+9m0di5gcGpSFGiZ6Gd9+sGC42M8fyIOGDUD3mA7T5cQB4zEAaFe4RUMP35gwArQ020AXVJnh/ktBHiAtlb9KJGbmxobjHbj/gNXMZO6Wj1TU11Vqf3+6PrEea4wv08TTE0W1vM3vKy8TF+DXsfZZwLtListeSDg5y9C7XLAUxQn4KFoyw/5eW5T/us38XY912W0++lWRi/4nq1tbZvWxibIyoxtz/YfVoemjPTfQ5f9p/WxLc2OuJzQ4Jia4ogkNrrabJz1/1chweH739cvHXWq9vO3RR0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDgtMDNUMjM6NDI6MjMrMDA6MDC3sNm5AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA4LTA0VDA2OjQ5OjQ1KzAwOjAwmgophAAAAABJRU5ErkJggg=="/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 1a006ex">.css-1a006ex{position:relative;background-color:var(--bg-primary);-webkit-transition:width 600ms ease;transition:width 600ms ease;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:0 1rem;}</style><nav class="css-1a006ex"><style data-emotion="css 1td19b0">.css-1td19b0{list-style:none;padding:0;margin:0;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;list-style:none;float:left;}</style><ul class="css-1td19b0"><style data-emotion="css 15zz3xc">.css-15zz3xc{display:inline;text-align:center;color:var(--text-primary);font-size:1.5rem;width:100%;}.css-15zz3xc:hover{-webkit-filter:grayscale(100%) opacity(0.7);filter:grayscale(100%) opacity(0.7);background:var(--bg-secondary);color:var(--text-secondary);}</style><li class="css-15zz3xc"><a href="/"><style data-emotion="css 1g7ixto">.css-1g7ixto{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style><div class="css-1g7ixto"><style data-emotion="css 19qosfw">.css-19qosfw{width:1.5rem;min-width:1.5rem;}</style><svg class="css-19qosfw" viewBox="0 0 442.24 1002.12"><title>Asset 7</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon points="221.12 1002.12 2.83 781 2.83 426.64 198.63 618.27 198.44 783.83 221.12 800.84 246.63 781 246.63 605.24 0 361.44 0 220.41 0 220.41 221.12 0 439.4 221.12 439.4 575.47 243.6 383.85 243.8 218.28 221.12 201.27 195.6 221.12 195.6 396.88 442.24 640.67 442.24 779.58 221.12 1002.12" style="fill:#111"></polygon></g></g></svg></div></a></li><style data-emotion="css 1bx0cut">.css-1bx0cut{border-left:2px solid #111;height:50%;}</style><div class="css-1bx0cut"></div><style data-emotion="css wht876">.css-wht876{display:inline;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:5rem;color:var(--text-primary);-webkit-text-decoration:none;text-decoration:none;-webkit-filter:grayscale(0%) opacity(1);filter:grayscale(0%) opacity(1);-webkit-transition:var(--transition-speed);transition:var(--transition-speed);}.css-wht876:hover{-webkit-filter:grayscale(100%) opacity(0.7);filter:grayscale(100%) opacity(0.7);background:var(--bg-secondary);color:var(--text-secondary);}</style><li class="css-wht876"><a href="/"><style data-emotion="css 8af0fh">.css-8af0fh{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><div class="css-8af0fh"><style data-emotion="css 1hnq5rr">.css-1hnq5rr{padding:0 2rem;}</style><h3 class="css-1hnq5rr">Sean D&#x27;Souza</h3></div></a></li></ul><style data-emotion="css 1824y1m">.css-1824y1m{list-style:none;padding:0 0 0 4rem;margin:0;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;list-style:none;}</style><ul class="css-1824y1m"><li class="css-wht876"><a href="/"><div class="css-8af0fh"><h4>Home</h4></div></a></li><li class="css-wht876"><a href="/cv/"><div class="css-8af0fh"><style data-emotion="css 1mys3sh">.css-1mys3sh{margin-left:1rem;}</style><h4 class="css-1mys3sh">CV</h4></div></a></li></ul></nav><div style="margin-left:auto;margin-right:auto"><main><div style="margin-left:auto;margin-right:auto;max-width:36rem;padding:2.25rem 1.125rem"><div><header><h1>ZEROTWO: Zero Effort Rentals &amp; Off-Chain Transactional Wallet Operations</h1><p>February 18, 2024<!-- --> • <!-- -->21<!-- --> min read</p></header><div><p>Asset rentals on blockchains need to change for mass adoption. They need to be zero-integration and collateral-free. Here's why:</p>
+<p>First, some background. <a href="https://www.renft.io/">reNFT</a> allows users to lend and rent assets/NFTs across multiple blockchains (they have 100k+ rentals on their platform). Their main focus is on the gaming industry where rented assets can include in-game items and characters. Most games have free-to-play models or one-time costs in the tens of dollars, which result in relatively low barriers to entry. Conversely, Web3 games sometimes require assets worth thousands of dollars to play, which makes trying them out financially difficult to justify. By renting assets for these games instead of buying them, the cost of exploring a game is significantly reduced by multiple orders of magnitude.</p>
+<p><a href="https://docs.renft.io/rental-solutions/collateral-free">reNFT's V2 solution</a> solves this problem by holding an asset in an escrow account when it's being rented, and asking games to call a <a href="https://docs.renft.io/developers/querying-renfts-on-chain-data">reNFT API</a> hosted on <a href="https://thegraph.com/">The Graph</a> to check if that asset is being rented by the gamer. Not all games will take the effort to call this API and even if they do, it would add another task for them to do when they already have enough on their plate. The act of calling our API and requiring games to take some effort to support us is what we call "integration", and is one of the core problems of V2.</p>
+<h2 id="pseudo-ownership" style="position:relative;"><a href="#pseudo-ownership" aria-label="pseudo ownership permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pseudo-ownership</h2>
+<p>reNFT's upcoming V3 solution and ZEROTWO aim to solve this by having renters have pseudo-ownership over an asset while it's being rented. <a href="https://docs.renft.io/rental-solutions/collateralized">reNFT's V1 collateralized solution</a> allowed renters to take full ownership of the asset during a rental. Renters sent money, called collateral, to an escrow account for the duration of the rental. They would get it back once the rental and the asset is returned. The amount of money sent was usually equivalent in value to the price of the asset. If the renter does not return the asset, the collateral is given to the lender as compensation. Generally, lenders were incentivized to only allow shorter-term rentals, since prices could fluctuate up, causing renters to be financially motivated to not return the asset. This solution has 2 main problems:</p>
+<ol>
+<li>There is a risk of lenders not getting back their asset. Even with collateral, many would consider losing an asset non-ideal (especially if the asset goes up in value).</li>
+<li>Renters need to have large amounts of money to rent , even though they will generally get it back. This significantly increases the barrier to entry for these games.</li>
+</ol>
+<p>An ideal solution would require renters to "own" an asset for the duration of a rental, paying only the rental price without collateral, while ensuring lenders can get their asset back when a rental is a complete. We narrowed possible solutions to: a custodial solution (ZEROTWO) and a non-custodial solution (V3)</p>
+<h2 id="introduction-to-zerotwo" style="position:relative;"><a href="#introduction-to-zerotwo" aria-label="introduction to zerotwo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to ZEROTWO</h2>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/28b8e75aa348d1efddec88e68a2a8563/d9199/zerotwo-diagram.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.22222222222223%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXUlEQVR42mMQEBBERsLCIkxMzNnZ2fPmLc3JKV21ZKm1rrm8oqIAvyAvLx8fHz83OxdcMYOQkDAEQfgiIqIMDAzdvd39E5dIy1sf3nss3NpPTVtTWUVVQVFRRkratSRF2cKUn5tXUFCIgZ2dk5mZhYmZmR+omZ8fiFjZ2aOCIyfUTqpIr2nOqbOV0pPkE9RR11RRVhGXkDL2cJWQV2BkYALZHBUelp+fW5hfICkkIiAiqaCkJSAgICokKismLSUspSGrkJ8QF+HuKs0toCggpiQu7eXm5evpmZ6aLioqwbBu+YJVMxfeOnbBRFHNwcWvuKKVV0hUSEBQQVJOSlRaS042ISXZ29NTWkRMWVhSU0Zx3apFqxbPunTuqrKSFsOePXurUqs2zlkVZmZnoWGoo2iswCviqGO2vKJ7b9vMDLcEJT5RLWEpJSEJVSEJDTnFGdP6d+7cfPPaPSUFTYb6lMzO5ILqkFhDCXkBdq4IFxtjDRUXHYclExYt7J3UHNciICAiISqSHOErLiomJCySlpxXX92REp8nJSnPoKut4+PuqaupraCsLCktk5mSqKWvYSVpv7Xs+KLcrW2u09m4Oc1MTJPjooARwcvDp6urb2fnKC4uCYw2BmkZGWA0aGlpKykqycnKGRmZiImJi4lIetgE+ztEuTkECAsLA2WlpGSA0QHUoKKqamJiamxsLCUlzSAAjB0+fj5ePkgaAHH5geEtoKKurKOnpaikADSLhwcYq6BUAJQCcoEJSVBACBTPQCEgBUEwNlChkLCgiJCAMD8vSAMwCUFkIfrhKQwAdXeFo7tKX6UAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ZEROTWO diagram"
+        title=""
+        src="/static/28b8e75aa348d1efddec88e68a2a8563/d9199/zerotwo-diagram.png"
+        srcset="/static/28b8e75aa348d1efddec88e68a2a8563/fc2a6/zerotwo-diagram.png 450w,
+/static/28b8e75aa348d1efddec88e68a2a8563/1cfc2/zerotwo-diagram.png 900w,
+/static/28b8e75aa348d1efddec88e68a2a8563/d9199/zerotwo-diagram.png 960w"
+        sizes="(max-width: 960px) 100vw, 960px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ZEROTWO diagram</figcaption>
+  </figure></p>
+<p><strong>Zero Effort Rentals &#x26; Off-Chain Transactional Wallet Operations</strong> or <strong>ZEROTWO</strong> is a system that manages wallets (key pairs) and allows limited use of these wallets through backend business logic. Renters "own" these wallets, but they're managed by ZEROTWO. By restricting how a renter can interact with their managed wallet, the backend can allow users to prove ownership of a wallet in a game and therefore, the asset in it during a rental. Since ZEROTWO manages the wallet, it is the only one who can transfer assets to and from the managed renter wallet, and it will only do that at the start and end of a rental. The renter cannot transfer an asset to other wallets against the wishes of lenders becase ZEROTWO does not expose a way to do that.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1031px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/50e6695b9ea454d9adb2f73f7a231b20/23592/zerotwo-architecture.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 80.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsUlEQVR42nWUfXOaQBDGjaCA8nLHISBRUAF11AaNTTOT6etMk2na7/95nu6ewWqn/WNZuJff7T67R2eTuXgoBgh8DyLw4Xuu9kmSYDCg8SCA67pnf2k8L4SAUgphGGrrPOY2XmsLvV4PfduBafZg2zbSNEWn08FwOIRhGLAsC91u92y8nucZGkXRH+B94eJ7ZeGYmdinBo7jLprM1pMMYrhpmvqdAa39F3iY+fi+6ONHaeLn0sJL0cGXmQkhxdVGKaXewJ4j5EP+CTxOHfwi0HNt42Xp4Lk08JSbWpd+v69TZs/GAAbxIQxi73neNfD91CagideVpSN8rQx8KkwEItAQXsz6ceocWet57ObmBo7jXAOXYw+HzEIzJiPP77tsqCcDP0A+zSGFpMoL+L6vq8rGVWfjdVdVFvQQUkGGEYQ2pb/DmBZOQ2TlGCqnNbHQBzDUdQeUsqNNUCYMlC2QHxEJLakPQ5oMWXyKSGYEqDy4M+rB2oMTWVpD2xqgmG5Qlw3mxQ6T2+oUJXMI3FEUvjdfIPz4Gf7+Hgn1X5qkGOUUbRkgXseQtYCt7Le+9LFaHrHdPGK9ekBVvoOiS/BtWeNruaAIWY/JBOHujiJZYhTHiKMY0UQhKH2omtKtAjhvQNM0qCe7BOYqm9pHoxEKCqRIk1PKitMkgTla7jPZplx6FL2nvbwNdGHam9PtGrrKfAW5yoL2iVZDrppHYvtvVZPU1PntDLvlPbb1HpuqQbM64mH7hMPqA9b5HTZFQ7ZHNV2fKqzaKhOsKAo0TYPtdkvicgtISjuF8uKzRX6CWbZAIqnq3oi+aYzGkzDVMOFTVgEBOcUsyzCfz5Hn+bmv+KDLu3u6hqZO83KMJWDN0zJCUl6kzE3Kvm1Qhv79u2KtTn14+maYihTGcYbZIcGkUfgNZpSEPDlL4yoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ZEROTWO architecture"
+        title=""
+        src="/static/50e6695b9ea454d9adb2f73f7a231b20/23592/zerotwo-architecture.png"
+        srcset="/static/50e6695b9ea454d9adb2f73f7a231b20/fc2a6/zerotwo-architecture.png 450w,
+/static/50e6695b9ea454d9adb2f73f7a231b20/1cfc2/zerotwo-architecture.png 900w,
+/static/50e6695b9ea454d9adb2f73f7a231b20/23592/zerotwo-architecture.png 1031w"
+        sizes="(max-width: 1031px) 100vw, 1031px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ZEROTWO architecture</figcaption>
+  </figure></p>
+<p>In the above diagram, the game is a website that supports EVM chains, and connects to a wallet extension to see if a gamer owns an asset in-game. The ZEROTWO wallet extension acts like any other wallet extension like MetaMask or Frame, but renters can only sign messages and connect the managed wallet to the website. For games that are not a website, the extension can be replaced with <a href="https://walletconnect.com/">WalletConnect</a>, which would be implemented by the ZEROTWO backend directly.</p>
+<p>The wallet extension's main purpose is to allow renters to prove to a game that they own an asset in their managed wallet. The lending app is very similar to the existing <a href="https://market.renft.io/">reNFT marketplace</a>, which allows users to lend and rent assets. The ZEROTWO backend is the brains of the operation and manages key pairs, gets rental data, manages users' lender orders and renter orders, manages wallet permissions, signs data to prove ownership, and much more. Lender orders manage the state of an asset lending, and renter orders manage the state of asset rentals. The "orders" terminology was inspired from marketplaces like <a href="https://opensea.io/">OpenSea</a>.</p>
+<p>The rest of the article will be focused on a select number of ZEROTWO's technical challenges and their solutions.</p>
+<h2 id="multi-chain" style="position:relative;"><a href="#multi-chain" aria-label="multi chain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-chain</h2>
+<p>Users prefer to own their own keys, so a non-custodial product will generally be preferred over a custodial product. So, in what scenarios is ZEROTWO advantageous?</p>
+<p>One of the goals of ZEROTWO is to have the ability to iterate quickly, which is accomplished by implementing business logic in the backend rather than in smart contracts. The lack of smart contract lock-in means backend business logic can be written in a chain-agnostic way. To achieve this, abstractions over common operations are necessary to minimize the amount of code needed to support a new chain. This section will focus on these abstractions.</p>
+<h3 id="caip" style="position:relative;"><a href="#caip" aria-label="caip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CAIP</h3>
+<p>A <a href="https://chainagnostic.org/CAIPs/caip-1">Chain Agnostic Improvement Proposal (CAIP)</a> is a technical spec that details standardized formats for chain-agnostic programs.
+For example:</p>
+<ul>
+<li>Chain IDs
+<ul>
+<li>eip155:1 (Ethereum)</li>
+</ul>
+</li>
+<li>Account IDs (wallet addresses)
+<ul>
+<li>eip155:1:0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</li>
+</ul>
+</li>
+<li>Asset types (e.g. ERC-20 token address)
+<ul>
+<li>eip155:1/erc20:0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</li>
+</ul>
+</li>
+<li>Asset IDs (e.g. ERC-721, ERC-1155 address with a token ID)
+<ul>
+<li>eip155:1/erc1155:0x0db8C099B426677f575D512874D45A767e9acC3c/1</li>
+</ul>
+</li>
+</ul>
+<p>ZEROTWO makes use of these standards by default, and uses blockchain-native IDs only when dealing with blockchain-specific logic.</p>
+<h3 id="asset-proxy" style="position:relative;"><a href="#asset-proxy" aria-label="asset proxy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asset proxy</h3>
+<p>Although no CAIPs define the term "asset", CAIP-19 specifies how to format asset types and asset IDs, so from an EVM perspective, this includes:</p>
+<ul>
+<li><a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md">SLIP-0044 (Ether)</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-20">ERC-20</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-721">ERC-721</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-1155">ERC-1155</a></li>
+</ul>
+<p>Note that CAIP assets include fungible tokens, whereas the way I refer to assets throughout the article generally imply NFTs.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IAsset</span> <span class="token punctuation">{</span>
+  <span class="token function">balanceOf</span><span class="token punctuation">(</span>owner<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>bigint<span class="token operator">></span>
+  <span class="token function">approve</span><span class="token punctuation">(</span>operator<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> amount<span class="token operator">?</span><span class="token operator">:</span> bigint<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span>
+  <span class="token function">isApproved</span><span class="token punctuation">(</span>account<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> operator<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">></span>
+  <span class="token function">transfer</span><span class="token punctuation">(</span>from<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> amount<span class="token operator">:</span> bigint<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>All assets implement the <code class="language-text">IAsset</code> interface, even though their APIs may not match exactly. If an asset does not support a method, it throws a <code class="language-text">NotImplementedError</code> (e.g. needed for <code class="language-text">approve</code> and <code class="language-text">isApproved</code> for Ether).</p>
+<p>A developer would use an AssetProxy class that chooses a standard based on the asset type or asset ID provided in its constructor shown below:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> assetNamespaceToAsset<span class="token operator">:</span> Record<span class="token operator">&lt;</span>
+  AssetNamespace<span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> signer<span class="token operator">?</span><span class="token operator">:</span> Signer<span class="token punctuation">)</span> <span class="token operator">=></span> IAsset
+<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>AssetNamespace<span class="token punctuation">.</span><span class="token constant">ERC20</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">ERC20Asset</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>AssetNamespace<span class="token punctuation">.</span><span class="token constant">ERC721</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">ERC721Asset</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>AssetNamespace<span class="token punctuation">.</span><span class="token constant">ERC1155</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">ERC1155Asset</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>AssetNamespace<span class="token punctuation">.</span><span class="token constant">SLIP44</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">SLIP44Asset</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> signer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AssetProxy</span> <span class="token keyword">implements</span> <span class="token class-name">IAsset</span> <span class="token punctuation">{</span>
+  asset<span class="token operator">:</span> IAsset
+  <span class="token function">constructor</span><span class="token punctuation">(</span>assetIdOrType<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> signer<span class="token operator">?</span><span class="token operator">:</span> Signer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> splitAssetIdOrType <span class="token operator">=</span> <span class="token function">parseAssetIdOrType</span><span class="token punctuation">(</span>assetIdOrType<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> splitAssetType <span class="token operator">=</span> splitAssetIdOrType<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"chainId"</span><span class="token punctuation">)</span>
+      <span class="token operator">?</span> <span class="token punctuation">(</span>splitAssetIdOrType <span class="token keyword">as</span> SplitAssetType<span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token punctuation">(</span>splitAssetIdOrType <span class="token keyword">as</span> SplitAssetId<span class="token punctuation">)</span><span class="token punctuation">.</span>splitAssetType
+    <span class="token keyword">const</span> assetNamespace <span class="token operator">=</span> AssetNamespaceEnum<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>
+      splitAssetType<span class="token punctuation">.</span>assetNamespace<span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>asset <span class="token operator">=</span> assetNamespaceToAsset<span class="token punctuation">[</span>assetNamespace<span class="token punctuation">]</span><span class="token punctuation">(</span>assetIdOrType<span class="token punctuation">,</span> signer<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">async</span> <span class="token function">transfer</span><span class="token punctuation">(</span>from<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> amount<span class="token operator">:</span> bigint<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>asset<span class="token punctuation">.</span><span class="token function">transfer</span><span class="token punctuation">(</span>from<span class="token punctuation">,</span> to<span class="token punctuation">,</span> amount<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">async</span> <span class="token function">balanceOf</span><span class="token punctuation">(</span>owner<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>asset<span class="token punctuation">.</span><span class="token function">balanceOf</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">async</span> <span class="token function">approve</span><span class="token punctuation">(</span>operator<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> amount<span class="token operator">?</span><span class="token operator">:</span> bigint<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>asset<span class="token punctuation">.</span><span class="token function">approve</span><span class="token punctuation">(</span>operator<span class="token punctuation">,</span> amount<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">async</span> <span class="token function">isApproved</span><span class="token punctuation">(</span>account<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> operator<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>asset<span class="token punctuation">.</span><span class="token function">isApproved</span><span class="token punctuation">(</span>account<span class="token punctuation">,</span> operator<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="signature-scheme" style="position:relative;"><a href="#signature-scheme" aria-label="signature scheme permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signature scheme</h3>
+<ul>
+<li>Blockchains use different signature schemes
+<ul>
+<li>Solana signers use Ed25519 key pairs</li>
+<li>Ethereum EOA wallets are represented by Secp256k1 key pairs</li>
+</ul>
+</li>
+</ul>
+<p>There are different RPC methods across chains to sign messages and transactions. For EVM chains, this includes:</p>
+<ul>
+<li><code class="language-text">eth_sign</code></li>
+<li><code class="language-text">personal_sign</code></li>
+<li><code class="language-text">eth_signTypedData</code></li>
+<li>Signing a transaction before sending <code class="language-text">eth_sendTransaction</code></li>
+</ul>
+<p>Most chains have similar operations when it comes to interacting with key pairs. Implementing blockchain-specific operations on top of a generic signing interface for ZEROTWO led to <code class="language-text">IWallet</code>:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IWallet</span> <span class="token punctuation">{</span>
+  <span class="token function">create</span><span class="token punctuation">(</span>chainId<span class="token operator">:</span> ChainId<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span>
+  <span class="token function">address</span><span class="token punctuation">(</span>chainId<span class="token operator">:</span> ChainId<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span>
+  <span class="token function">sign</span><span class="token punctuation">(</span>chainId<span class="token operator">:</span> ChainId<span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Wallets in ZEROTWO are used for 2 purposes:</p>
+<ol>
+<li>Escrow accounts (1 per chain)</li>
+<li>User accounts (1 per chain per user)</li>
+</ol>
+<p><code class="language-text">IWallet</code> assumes its class implementation already knows whether it is an escrow account or a user account, and if it's a user account, the user's ID. Ideally in production, key pairs are stored in <a href="https://en.wikipedia.org/wiki/Hardware_security_module">hardware security modules (HSMs)</a> through services like <a href="https://aws.amazon.com/kms/">AWS KMS</a>, or <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management-choose#compare-other-customer-requirements">one of Azure's key management solutions</a>. For development, it may be easier to store key pairs in a database. How key pairs are stored, and the fact that key pairs of different signature schemes can be stored in different places are abstracted away.</p>
+<h2 id="outbox-pattern" style="position:relative;"><a href="#outbox-pattern" aria-label="outbox pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Outbox pattern</h2>
+<p>Lender orders and renter orders in ZEROTWO are stored in a DB rather than a smart contracts. This poses some challenges in terms of failure modes. For example, at the end of the rent service method is the following:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">RenterOrderService</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">rent</span><span class="token punctuation">(</span>
+    <span class="token comment">// ...args</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 1. Validate args</span>
+    <span class="token comment">// 2. Create a renterOrder object from the args</span>
+    <span class="token comment">// 3. Update lender order state according to a FSM</span>
+    <span class="token comment">// ...</span>
+    <span class="token keyword">await</span> lenderOrder<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> ro <span class="token operator">=</span> <span class="token keyword">await</span> RenterOrder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>renterOrder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token function">enqueueReceivePaymentOnRentalTask</span><span class="token punctuation">(</span>ro<span class="token punctuation">.</span>_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> RentEvent<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> ro<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre></div>
+<p>If any of the models fail to save, the system will have some data set correctly and other data not set at all. In order to prevent this, we can use transactions:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">RenterOrderService</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">rent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...args</span>
+    <span class="token comment">// 1. Validate args</span>
+    <span class="token comment">// 2. Create a renterOrder object from the args</span>
+    <span class="token comment">// 3. Update lender order state according to a FSM</span>
+    <span class="token comment">// ...</span>
+    <span class="token keyword">const</span> session <span class="token operator">=</span> <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span><span class="token function">startSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">startTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> lenderOrder<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> ro <span class="token operator">=</span> <span class="token keyword">await</span> RenterOrder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>renterOrder<span class="token punctuation">,</span> <span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> <span class="token function">enqueueReceivePaymentOnRentalTask</span><span class="token punctuation">(</span>ro<span class="token punctuation">.</span>_id<span class="token punctuation">)</span>
+    <span class="token keyword">await</span> RentEvent<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">commitTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">endSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ro
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Now, all MongoDB writes in the rent service are atomic as they all happen together or they're rolled back. There's still a problem. If either the <code class="language-text">ReceivePaymentOnRentalTask</code> fails to enqueue or the transaction aborts, the system would end up in a bad state. Our goal is to reliably enqueue a task and save data. This can be solved with the <a href="https://microservices.io/patterns/data/transactional-outbox.html">outbox pattern</a>. We create an <code class="language-text">Outbox</code> collection that stores tasks that need to be queued. Separately (asynchronously from the rent service method), the backend enqueues tasks in the <code class="language-text">Outbox</code> collection. If enqueueing fails, it can be retried at anytime, which guarantees at least once delivery. Here's the code for this:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">RenterOrderService</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">rent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...args</span>
+    <span class="token comment">// 1. Validate args</span>
+    <span class="token comment">// 2. Create a renterOrder object from the args</span>
+    <span class="token comment">// 3. Update lender order state according to a FSM</span>
+    <span class="token comment">// ...</span>
+    <span class="token keyword">const</span> session <span class="token operator">=</span> <span class="token keyword">await</span> mongoose<span class="token punctuation">.</span><span class="token function">startSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">startTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> lenderOrder<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> ro <span class="token operator">=</span> <span class="token keyword">await</span> RenterOrder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>renterOrder<span class="token punctuation">,</span> <span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> Outbox<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span> renterOrderId<span class="token operator">:</span> ro<span class="token punctuation">.</span>_id <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        taskName<span class="token operator">:</span> <span class="token string">"ReceivePaymentOnRentalTask"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">await</span> RentEvent<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> session <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">commitTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> session<span class="token punctuation">.</span><span class="token function">endSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ro
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Tasks should generally be idempotent in case tasks fail in the middle of execution. Deduplication on the queue side can prevent a task from being queued multiple times. This should ensure tasks are queued and executed reliably, while data remains clean.</p>
+<h2 id="web-extension-message-passing" style="position:relative;"><a href="#web-extension-message-passing" aria-label="web extension message passing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web extension message passing</h2>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 881px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b6a6cbf8b74b652d36cdafbb8380820f/96658/zerotwo-extension-architecture.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR42nVT227aQBRcgy/rG2sbg21wSCgEQiJVlfraVmkLtI1Afej/f8t050irJCJ5GJ3L7pkzZy/q85XGshkhNwXyPBcYYzAej1FVFUajkeRoi6IQ0H8J7ifquob6t/PxcZ5AqQHSNIXWsfUVFouFxIPBQAiHwyF830ccx5Jj7MCYNRSg/m4DfJprlFmExmhMTYxxGmDeNdI9DEMhjKJIfBKw2PM8AZsEQSA5TqX2uxKPCw+/1gEOqyF+XCsclwofWoMoTmWj1lpUkJQKGdPnGvOvCJ+2Eb7NFX5vNI7rEI+9wv7GEnYFQp3IRiqjzbJMisqylLOkwgvC0zbEwRIdBVQZYH9NQoM0N3azjyRJhJSFJGExR2eOarnO0eVSTrc+nu4SnB8ynO9T/LFKD5ZwZRUGUYzcqprNZlJEQqokGa07Dje+KPx54+FL7+Hr1TO+29yyLaDtGfLM2JmWimjdbTvVBJsIYTOpcIG6RG2fQNM0om6z2aDve4mn06mAftu2ryAjl2WFt8BuHIvdqYaW43VdJ2R8Uu7JEPRFIR/je+BtkpRwv2UymYhCrru8AxX+BzH6BC5jVf76AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ZEROTWO extension architecture"
+        title=""
+        src="/static/b6a6cbf8b74b652d36cdafbb8380820f/96658/zerotwo-extension-architecture.png"
+        srcset="/static/b6a6cbf8b74b652d36cdafbb8380820f/fc2a6/zerotwo-extension-architecture.png 450w,
+/static/b6a6cbf8b74b652d36cdafbb8380820f/96658/zerotwo-extension-architecture.png 881w"
+        sizes="(max-width: 881px) 100vw, 881px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ZEROTWO extension architecture</figcaption>
+  </figure></p>
+<p>The ZEROTWO wallet extension acts as a normal wallet extension implementing part of the <a href="https://eips.ethereum.org/EIPS/eip-1193">EIP-1193 API</a> and more.</p>
+<ul>
+<li>eth_requestAccounts</li>
+<li>eth_accounts</li>
+<li>eth_chainId</li>
+<li>personal_sign</li>
+<li>wallet_getPermissions</li>
+<li>wallet_requestPermissions</li>
+<li>wallet_switchEthereumChain</li>
+</ul>
+<p>This allows an EVM-based game to interact with the wallet over JSON-RPC like:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">await</span> window<span class="token punctuation">.</span>ethereum<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  method<span class="token operator">:</span> <span class="token string">"eth_chainId"</span><span class="token punctuation">,</span>
+  params<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<p>The wallet extension's content script injects a script called the injected script into the active tab like this:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">injectScript</span> <span class="token operator">=</span> <span class="token punctuation">(</span>scriptName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span>head <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement
+    <span class="token keyword">const</span> containerChildren <span class="token operator">=</span> container<span class="token punctuation">.</span>children
+    <span class="token keyword">const</span> scriptTag <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"script"</span><span class="token punctuation">)</span>
+    scriptTag<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"async"</span><span class="token punctuation">,</span> <span class="token string">"false"</span><span class="token punctuation">)</span>
+    scriptTag<span class="token punctuation">.</span>src <span class="token operator">=</span> chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span><span class="token function">getURL</span><span class="token punctuation">(</span>scriptName<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> firstChild <span class="token operator">=</span>
+      containerChildren<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> containerChildren<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    container<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">,</span> firstChild<span class="token punctuation">)</span>
+    container<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"reNFT provider injection failed."</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>This project was started before <a href="https://eips.ethereum.org/EIPS/eip-6963">EIP-6963</a>, so we will assume <code class="language-text">window.ethereum</code> points to one wallet at a time. The injected script must set <code class="language-text">window.ethereum</code> to the provider in the injected script:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">import</span> EventEmitter <span class="token keyword">from</span> <span class="token string">"events"</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">RequestArguments</span> <span class="token punctuation">{</span>
+  <span class="token keyword">readonly</span> method<span class="token operator">:</span> <span class="token builtin">string</span>
+  <span class="token keyword">readonly</span> params<span class="token operator">?</span><span class="token operator">:</span> <span class="token keyword">readonly</span> <span class="token builtin">unknown</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">|</span> object
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">ReNFTProvider</span> <span class="token keyword">extends</span> <span class="token class-name">EventEmitter</span> <span class="token punctuation">{</span>
+  <span class="token function">request</span><span class="token punctuation">(</span>args<span class="token operator">:</span> RequestArguments<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">unknown</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>ethereum <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReNFTProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<p>The request method must find a way to handle all the JSON-RPC methods, but the business logic for interacting with wallet key pairs is located in the ZEROTWO backend.</p>
+<p>Many developers architect their app so that the background script (service worker in <a href="https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3">Manifest V3</a>) makes API calls. As a result, it can easily communicate with</p>
+<ul>
+<li>The content script</li>
+<li>The popup</li>
+<li>Any created windows</li>
+</ul>
+<p>It generally also helps with separation of concerns, and makes it harder to make mistakes by exposing sensitive data to other extensions or the active tab like a content script might.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">enum</span> WebExtensionLocation <span class="token punctuation">{</span>
+  InjectedScript <span class="token operator">=</span> <span class="token string">"InjectedScript"</span><span class="token punctuation">,</span>
+  BackgroundScript <span class="token operator">=</span> <span class="token string">"BackgroundScript"</span><span class="token punctuation">,</span>
+  Popup <span class="token operator">=</span> <span class="token string">"Popup"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>For wallets, the injected script, the background script and the popup need to communicate with each other for different purposes. These are called <code class="language-text">WebExtensionLocation</code>s.</p>
+<p>In order for <code class="language-text">ReNFTProvider.request</code> to call an API on the backend, here's what we have to do:</p>
+<ol>
+<li>The injected script passes a message with the request to the content script</li>
+<li>The content script passes a message with the request to the background script</li>
+<li>The background script calls the backend, which returns a response</li>
+<li>The background script passes a message with the response back to the content script</li>
+<li>The content script passes a message with the response back to the injected script</li>
+</ol>
+<p>This is visualized by the green arrows below:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 881px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5214eb8e882809099e197b185debb50e/96658/zerotwo-extension-json-rpc.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVR42nVT227UMBC1N3Hs3DaXzeZGSi9pl0JfkHgFQUu77UpU4v9/5uAzJdJWhYejmbE9Z86MbfXlxOGiWyMvSuR5LiiKAk3ToK5rrNdrWaMty1JA/xg8v+So39caN6OFUgHSNIVzsfcVhmlAkiYIVoEQBkGAMAwRxzFWq5XECxgzhwLUrw8an985VJlFVzi0RYxNZjD2LXJfPYoipFkKa634JGCy1lrAIsYYWdtsNlB3Hwvcvtd4vDR4mAPcnSrszxXmvoSNUzlorIFeaSGlQuec+NyjuleEjzuD75PC085hfxnhh/fvzxQuhhKRS+RgGIVisyyTpKqqZJZU+IbwaRd4ZUbI9qLS4P6UhAXSvPCHQ1hnYSIjiSRhMlvnCKg2SRJpXS7lcKVxuI7xfJPh+VOKg1f64Alnr9DYGLlXNY6jJJGQKklGS+Lj9kXhzzONryca345w69fO/QydnyFnxsq0VES73DZjFiFYRAi7bY03aCo0/gl0XSfq5qsZ0zRJ3LatgH7f968gLVdVjX+B1dgWq7vYvVjf3jAMQsYHvTwZgr4o5GP8H3ibeZa/4O9v2W63opD7LLj8LoIK/wBpZgPYLUowygAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Message passing required to handle a JSON-RPC method"
+        title=""
+        src="/static/5214eb8e882809099e197b185debb50e/96658/zerotwo-extension-json-rpc.png"
+        srcset="/static/5214eb8e882809099e197b185debb50e/fc2a6/zerotwo-extension-json-rpc.png 450w,
+/static/5214eb8e882809099e197b185debb50e/96658/zerotwo-extension-json-rpc.png 881w"
+        sizes="(max-width: 881px) 100vw, 881px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Message passing required to handle a JSON-RPC method</figcaption>
+  </figure></p>
+<p>Without a framework, handling message passing purely with Chrome/browser APIs led to code that was hard to understand. Reading other wallet extension code revealed they all implemented some sort of internal RPC framework, but even they were not very easy to follow. There had to be a better way. After some deep thought, I came up with a layered architecture to solve this.</p>
+<ul>
+<li><strong>Layer 1</strong> - native browser APIs
+<ul>
+<li>e.g. <code class="language-text">chrome.runtime.sendMessage</code>, <code class="language-text">window.postMessage</code></li>
+</ul>
+</li>
+<li><strong>Layer 2</strong> - events
+<ul>
+<li>Producer/consumer API from one <code class="language-text">WebExtensionLocation</code> to another</li>
+</ul>
+</li>
+<li><strong>Layer 3</strong> - higher-level protocols
+<ul>
+<li>Request/response: <code class="language-text">Protocol.ReNFTRPC</code></li>
+<li>Sending events to multiple locations: <code class="language-text">Protocol.ReNFTEvent</code></li>
+</ul>
+</li>
+</ul>
+<p>Layer 2/the events layer would call Layer 1/native browser APIs to send and receive events to and from <code class="language-text">WebExtensionLocation</code>s. Layer 3 protocols would leverage the events layer to implement higher-level protocols useful for product-focused developers. This all means that product-focused developers don't need to ever touch native browser APIs, and only interact with Layer 3 protocols.</p>
+<h3 id="events-layer" style="position:relative;"><a href="#events-layer" aria-label="events layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events layer</h3>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ELEvent</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token builtin">string</span>
+  metadata<span class="token operator">:</span> <span class="token punctuation">{</span>
+    publishTime<span class="token operator">:</span> Date
+    protocol<span class="token operator">:</span> Protocol
+    source<span class="token operator">:</span> WebExtensionLocation
+    destination<span class="token operator">:</span> WebExtensionLocation
+  <span class="token punctuation">}</span>
+  data<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ELEventWithTopic</span> <span class="token punctuation">{</span>
+  topic<span class="token operator">:</span> <span class="token builtin">string</span>
+  event<span class="token operator">:</span> ELEvent
+<span class="token punctuation">}</span></code></pre></div>
+<p>An events layer event or <code class="language-text">ELEvent</code> has serialized data, metadata, and an ID. It is produced by an <code class="language-text">EventProducer</code> on a topic.</p>
+<h4 id="eventproducer" style="position:relative;"><a href="#eventproducer" aria-label="eventproducer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EventProducer</h4>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">EventProducer</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">produce</span><span class="token operator">:</span> <span class="token punctuation">(</span>
+    topic<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+    event<span class="token operator">:</span> ProducerPartialELEvent<span class="token punctuation">,</span>
+    target<span class="token operator">?</span><span class="token operator">:</span> WebExtensionLocation<span class="token punctuation">,</span>
+    context<span class="token operator">?</span><span class="token operator">:</span> ProducerContext<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>The <code class="language-text">topic</code> a string representing what's being communicated. For example, the <code class="language-text">chainChanged</code> topic will have events whose data contains chain IDs. It is emitted when a chain has been changed. In the produce method, a full event will be constructed from the <code class="language-text">event</code> parameter and the generated metadata fields:</p>
+<ul>
+<li><code class="language-text">publishTime</code></li>
+<li><code class="language-text">source</code></li>
+<li><code class="language-text">destination</code></li>
+</ul>
+<p>The <code class="language-text">target</code> parameter refers to the location the event is supposed to be sent to. When empty, the event is sent to all supported destinations.</p>
+<h4 id="contexts" style="position:relative;"><a href="#contexts" aria-label="contexts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contexts</h4>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token comment">// Consumer</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">HandlerContext</span> <span class="token punctuation">{</span>
+  senderId<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span>
+  senderUrl<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Producer</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ProducerContext</span> <span class="token punctuation">{</span>
+  senderId<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// RPC method</span>
+<span class="token comment">// Layer 3, but here since it fits nicely with other contexts</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">RPCContext</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  source<span class="token operator">:</span> WebExtensionLocation
+<span class="token punctuation">}</span> <span class="token operator">&amp;</span> HandlerContext</code></pre></div>
+<p>Contexts contain information from lower layers. The <code class="language-text">ProducerContext</code> is used when the <code class="language-text">WebExtensionLocation</code> is not enough to successfully produce an event. This is needed particularly when sending a message to a specific tab, given a tab's ID (<code class="language-text">senderId</code>). The <code class="language-text">senderUrl</code> is set when the injected script sends a message to the background script. It is used to derive the origin of the active tab. This is important for identifying a website when dealing with website-specific permissions. <code class="language-text">source</code> in <code class="language-text">RPCContext</code> is useful in the <code class="language-text">ReNFTRPC</code> protocol to restrict which <code class="language-text">WebExtensionLocation</code>s can call a method (e.g. only allow the popup, but not the injected script to call an RPC method).</p>
+<h4 id="eventconsumer" style="position:relative;"><a href="#eventconsumer" aria-label="eventconsumer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EventConsumer</h4>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">EventHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+  event<span class="token operator">:</span> ELEventWithTopic<span class="token punctuation">,</span>
+  context<span class="token operator">:</span> HandlerContext<span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">EventConsumer</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">addConsumer</span><span class="token operator">:</span> <span class="token punctuation">(</span>handler<span class="token operator">:</span> EventHandler<span class="token punctuation">,</span> handlerId<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span>
+  removeConsumer<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span>handlerId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>An <code class="language-text">EventConsumer</code> interface allows adding and optionally removing consumers. It assumes that any events the handler does not want to deal with will be filtered out in the handler's implementation. The implementation of <code class="language-text">EventConsumer</code> uses Layer 1 APIs to listen for events and appropriately pass valid <code class="language-text">ELEvents</code> to all handlers.</p>
+<h4 id="example" style="position:relative;"><a href="#example" aria-label="example permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Each <code class="language-text">WebExtensionLocation</code> must instantiate an event producer and consumer. Here's the injected script message passing code:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> location <span class="token operator">=</span> WebExtensionLocation<span class="token punctuation">.</span>InjectedScript
+<span class="token keyword">class</span> <span class="token class-name">ISEventConsumer</span> <span class="token keyword">implements</span> <span class="token class-name">EventConsumer</span> <span class="token punctuation">{</span>
+  #handlerRegistry<span class="token operator">:</span> EventHandler<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"message"</span><span class="token punctuation">,</span> event <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> eventWithTopicResult <span class="token operator">=</span> ELEventWithTopic<span class="token punctuation">.</span><span class="token function">safeParse</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        eventWithTopicResult<span class="token punctuation">.</span>success <span class="token operator">&amp;&amp;</span>
+        eventWithTopicResult<span class="token punctuation">.</span>data<span class="token punctuation">.</span>event<span class="token punctuation">.</span>metadata<span class="token punctuation">.</span>destination <span class="token operator">===</span> location
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">allSettled</span><span class="token punctuation">(</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>#handlerRegistry<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>handler <span class="token operator">=></span>
+            <span class="token function">handler</span><span class="token punctuation">(</span>eventWithTopicResult<span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">addConsumer</span><span class="token punctuation">(</span>handler<span class="token operator">:</span> EventHandler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>#handlerRegistry<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>handler<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">ISEventProducer</span> <span class="token keyword">implements</span> <span class="token class-name">EventProducer</span> <span class="token punctuation">{</span>
+  #supportedDestinations <span class="token operator">=</span> <span class="token punctuation">[</span>
+    WebExtensionLocation<span class="token punctuation">.</span>BackgroundScript<span class="token punctuation">,</span>
+    WebExtensionLocation<span class="token punctuation">.</span>Popup<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+  <span class="token keyword">async</span> <span class="token function">produce</span><span class="token punctuation">(</span>
+    topic<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+    event<span class="token operator">:</span> ProducerPartialELEvent<span class="token punctuation">,</span>
+    target<span class="token operator">?</span><span class="token operator">:</span> WebExtensionLocation<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>#supportedDestinations<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TargetInvalidError</span><span class="token punctuation">(</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Target </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>target<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> is invalid. Choose one of </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>#supportedDestinations<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span>
+    <span class="token keyword">const</span> destinations <span class="token operator">=</span> target <span class="token operator">?</span> <span class="token punctuation">[</span>target<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#supportedDestinations
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> destination <span class="token keyword">of</span> destinations<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> metadata <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>event<span class="token punctuation">.</span>metadata<span class="token punctuation">,</span>
+        publishTime<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        source<span class="token operator">:</span> location<span class="token punctuation">,</span>
+        destination<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> fullEvent<span class="token operator">:</span> ELEvent <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>event<span class="token punctuation">,</span> metadata <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> eventWithTopic <span class="token operator">=</span> <span class="token punctuation">{</span> topic<span class="token punctuation">,</span> event<span class="token operator">:</span> fullEvent <span class="token punctuation">}</span>
+      window<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span>eventWithTopic<span class="token punctuation">,</span> <span class="token string">"*"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> isEventConsumer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ISEventConsumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> isEventProducer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ISEventProducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<h3 id="renftrpc-protocol" style="position:relative;"><a href="#renftrpc-protocol" aria-label="renftrpc protocol permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReNFTRPC protocol</h3>
+<p>The ReNFTRPC protocol takes heavy inspiration from JSON-RPC. It features:</p>
+<ul>
+<li>Adding runtime checking of params and response types</li>
+<li>Allowing requests and responses from any <code class="language-text">WebExtensionLocation</code></li>
+<li>Type safety in addition to runtime safety</li>
+</ul>
+<h4 id="server" style="position:relative;"><a href="#server" aria-label="server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server</h4>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">EthRPCMethods</span> <span class="token punctuation">{</span>
+  <span class="token decorator"><span class="token at operator">@</span><span class="token function">rpcMethod</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">async</span> <span class="token function">handleEthAccountsWithChainId</span><span class="token punctuation">(</span>
+    ctx<span class="token operator">:</span> RPCContext<span class="token punctuation">,</span>
+    params<span class="token operator">:</span> HandleEthAccountsWithChainIdParams<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>RPCMethodResponse<span class="token operator">&lt;</span>HandleEthAccountsResult<span class="token operator">>></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> uri <span class="token operator">=</span> ctx<span class="token operator">?.</span>senderUrl
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>uri <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> error<span class="token operator">:</span> ParametersInvalidErrorDTO <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> origin <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token constant">URL</span></span><span class="token punctuation">(</span>uri<span class="token punctuation">)</span><span class="token punctuation">.</span>origin
+    <span class="token keyword">return</span> <span class="token function">ethAccountsWithChainId</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>chainId<span class="token punctuation">,</span> origin<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>RPC methods are defined like the above. They must have the <code class="language-text">rpcMethod</code> decorator. They take in <code class="language-text">RPCContext</code>, a method-specific params type, and return a <code class="language-text">Promise&lt;RPCMethodResponse&lt;ResultType>></code>.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">RPCMethodResponse<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span> <span class="token operator">=</span>
+  <span class="token operator">|</span> <span class="token punctuation">{</span>
+      result<span class="token operator">:</span> <span class="token constant">T</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">|</span> <span class="token punctuation">{</span> error<span class="token operator">:</span> RPCErrorDTO <span class="token punctuation">}</span></code></pre></div>
+<p>An <code class="language-text">RPCMethodResponse</code> can either be a result or an error, similar to JSON-RPC. The params and result types are <a href="https://zod.dev/">Zod</a> schemas that are checked at runtime in both the client and server <code class="language-text">WebExtensionLocation</code>s to ensure no malicious actors can inject anything that doesn't meet the defined schemas. From an events layer perspective, requests and responses are sent on a topic equivalent to the RPC method's name. With a larger scale, it might be necessary to namespace RPC methods by class name (e.g. <code class="language-text">EthRPCMethods.handleEthAccountsWithChainId</code>).</p>
+<h5 id="method-registry" style="position:relative;"><a href="#method-registry" aria-label="method registry permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Method registry</h5>
+<p>To ensure all <code class="language-text">WebExtensionLocation</code>s have access to the params/request and result/response schemas, a script using the <a href="https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API">TypeScript Compiler API</a> generates a file with all the RPC methods in all <code class="language-text">WebExtensionLocation</code>s. Upon creation of the RPC client, these definitions are registered in a <code class="language-text">MethodRegistry</code>. The generation script also provides type safety to the client, which makes product-focused developers more productive.</p>
+<p>The method handlers are registered in the decorator of the RPC method. This allows for the implementation of the RPC method to only be registered in the <code class="language-text">WebExtensionLocation</code> it was defined in.</p>
+<p>Each <code class="language-text">WebExtensionLocation</code>'s <code class="language-text">EventProducer</code> and <code class="language-text">EventConsumer</code> is used to instantiate an RPC client to allow them to send and receive RPC messages with <code class="language-text">createRPCClient</code>:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> methodDefinitions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./generated"</span>
+
+<span class="token comment">// Decorator definition</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">rpcMethod</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>target<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> methodName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> _descriptor<span class="token operator">:</span> PropertyDescriptor<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    MethodRegistry<span class="token punctuation">.</span><span class="token function">registerDefinition</span><span class="token punctuation">(</span>methodName<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      methodHandler<span class="token operator">:</span> target<span class="token punctuation">[</span>methodName<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> createRPCClient <span class="token operator">=</span> <span class="token punctuation">(</span>
+  eventsConsumer<span class="token operator">:</span> EventConsumer<span class="token punctuation">,</span>
+  eventsProducer<span class="token operator">:</span> EventProducer<span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> RPCClient <span class="token operator">=></span> <span class="token punctuation">{</span>
+  methodDefinitions<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>defn <span class="token operator">=></span> <span class="token punctuation">{</span>
+    MethodRegistry<span class="token punctuation">.</span><span class="token function">registerDefinition</span><span class="token punctuation">(</span>defn<span class="token punctuation">.</span>methodName<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      requestSchema<span class="token operator">:</span> defn<span class="token punctuation">.</span>requestSchema<span class="token punctuation">,</span>
+      responseSchema<span class="token operator">:</span> defn<span class="token punctuation">.</span>responseSchema<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BaseRPCClient</span><span class="token punctuation">(</span>eventsConsumer<span class="token punctuation">,</span> eventsProducer<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h4 id="client" style="position:relative;"><a href="#client" aria-label="client permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client</h4>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">RPCClient</span> <span class="token punctuation">{</span>
+  <span class="token generic-function"><span class="token function">request</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> MethodName<span class="token punctuation">,</span> <span class="token constant">U</span> <span class="token keyword">extends</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">></span></span></span><span class="token punctuation">(</span>
+    method<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> MethodParams<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">,</span>
+    id<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">U</span><span class="token punctuation">,</span>
+    location<span class="token operator">?</span><span class="token operator">:</span> WebExtensionLocation<span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">U</span> <span class="token keyword">extends</span> <span class="token class-name"><span class="token keyword">undefined</span></span> <span class="token operator">?</span> <span class="token keyword">void</span> <span class="token operator">:</span> RPCMethodResponse<span class="token operator">&lt;</span>MethodResponse<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>>></span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>The <code class="language-text">RPCClient</code> is designed to be very similar to JSON-RPC. It takes in a <code class="language-text">method</code> (the method name), and params like any method. The <code class="language-text">location</code> is by default the background script, but can be changed by specifying it explicitly. In JSON-RPC, if an <code class="language-text">id</code> is not passed, the request becomes a notification where the client does not await a response. <code class="language-text">ReNFTRPC</code> has the same behavior.</p>
+<p>Here's an example of calling <code class="language-text">getActiveAccount</code>:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> accountsResponse <span class="token operator">=</span> <span class="token keyword">await</span> extRPCClient<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>
+  <span class="token string">"getActiveAccount"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> origin<span class="token operator">:</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>origin <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">ulid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">// By default, it's routed to the background script</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"result"</span> <span class="token keyword">in</span> accountsResponse<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> accountId <span class="token operator">=</span> accountsResponse<span class="token punctuation">.</span>result<span class="token punctuation">.</span>accountId
+  <span class="token comment">// Do something with the accountId</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2 id="flows" style="position:relative;"><a href="#flows" aria-label="flows permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Flows</h2>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1800px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/54b452be73124708777c905c442c83a1/29114/zerotwo-flow-example.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.22222222222223%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA20lEQVR42t2Saw6DIBCEOYsvVHygJgo1eoT2HN7/AFMGqrFpk/5p0qQ/JuzC+Lm7IJIkwTclfg6M4xhRFLk1KMTxK5AHZ+2mNE2fYEVRoKoqlGXpxTjP5eEXu7FtW2it0TQN+r53pvyAE0oRNo4j1nXFxVpYa7C4WOv28AnCZF7AGIN5nt1qsSwLOgen4Xa9Yts29MPgQcZMmKYJXdf5Iij+PMuyAEwIlGFDZtK3wQPmFCtm5fyormufU5VybavQMqWUchz5fCk7yOecyeMCznN9p/Osxf+9w0/AOzEuP3R+RnCAAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Wallet request permissions flow"
+        title=""
+        src="/static/54b452be73124708777c905c442c83a1/d61c2/zerotwo-flow-example.png"
+        srcset="/static/54b452be73124708777c905c442c83a1/fc2a6/zerotwo-flow-example.png 450w,
+/static/54b452be73124708777c905c442c83a1/1cfc2/zerotwo-flow-example.png 900w,
+/static/54b452be73124708777c905c442c83a1/d61c2/zerotwo-flow-example.png 1800w,
+/static/54b452be73124708777c905c442c83a1/29114/zerotwo-flow-example.png 1920w"
+        sizes="(max-width: 1800px) 100vw, 1800px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Wallet request permissions flow</figcaption>
+  </figure></p>
+<p>A flow (also known as a wizard) is a series of forms that guides a user through a step-by-step process. The ZEROTWO wallet extension uses flows when a website asks a user to sign a message, request permissions to accounts, or switch chains. The above <code class="language-text">WalletRequestPermissionsFlow</code> consists of a <code class="language-text">pickAccountsPage</code> and an <code class="language-text">acceptRejectPage</code>. The <code class="language-text">pickAccountsPage</code> has a <code class="language-text">pickAccountsField</code>, whose value is a list of accounts picked, while the <code class="language-text">acceptRejectPage</code> has no fields. Flows on the frontend, for the purposes of ZEROTWO, can update its state like an FSM. The <code class="language-text">pickAccountsPage</code> has a transition, <code class="language-text">pickAccounts</code>, that updates the <code class="language-text">currentPage</code> to the <code class="language-text">acceptRejectPage</code>. The <code class="language-text">acceptRejectPage</code> has 3 transitions:</p>
+<ol>
+<li><code class="language-text">previous</code> - set the <code class="language-text">currentPage</code> to <code class="language-text">pickAcccountsPage</code></li>
+<li><code class="language-text">accept</code> - set the <code class="language-text">finishFlowData</code> with the picked accounts and accepted as true</li>
+<li><code class="language-text">reject</code> - set the <code class="language-text">finishFlowData</code> with accepted as false</li>
+</ol>
+<p>The above can be represented in code like this:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> transitions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pickAccountsPage<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">pickAccounts</span><span class="token operator">:</span> state <span class="token operator">=></span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>currentPage <span class="token operator">=</span> <span class="token string">"acceptRejectPage"</span>
+      <span class="token keyword">return</span> state
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  acceptRejectPage<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">accept</span><span class="token operator">:</span> state <span class="token operator">=></span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>finishFlowData <span class="token operator">=</span> <span class="token punctuation">{</span>
+        flowType<span class="token operator">:</span> FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletRequestPermissionsFlow<span class="token punctuation">,</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span>
+          accepted<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          accounts<span class="token operator">:</span> state<span class="token punctuation">.</span>pageState<span class="token punctuation">.</span>pickAccountsPage<span class="token punctuation">.</span>pickAccountsField <span class="token operator">??</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> state
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">reject</span><span class="token operator">:</span> state <span class="token operator">=></span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>finishFlowData <span class="token operator">=</span> <span class="token punctuation">{</span>
+        flowType<span class="token operator">:</span> FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletRequestPermissionsFlow<span class="token punctuation">,</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span>
+          accepted<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          accounts<span class="token operator">:</span> state<span class="token punctuation">.</span>pageState<span class="token punctuation">.</span>pickAccountsPage<span class="token punctuation">.</span>pickAccountsField <span class="token operator">??</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> state
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">previous</span><span class="token operator">:</span> state <span class="token operator">=></span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>currentPage <span class="token operator">=</span> <span class="token string">"pickAccountsPage"</span>
+      <span class="token keyword">return</span> state
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>What does state look like? Here's an initial state factory for <code class="language-text">WalletRequestPermissionsFlow</code>:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> z <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"zod"</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> FlowParams <span class="token operator">=</span> z<span class="token punctuation">.</span><span class="token function">discriminatedUnion</span><span class="token punctuation">(</span><span class="token string">"flowType"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+  z<span class="token punctuation">.</span><span class="token function">object</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    flowType<span class="token operator">:</span> z<span class="token punctuation">.</span><span class="token function">literal</span><span class="token punctuation">(</span>FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletRequestPermissionsFlow<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> z<span class="token punctuation">.</span><span class="token function">object</span><span class="token punctuation">(</span><span class="token punctuation">{</span> origin<span class="token operator">:</span> z<span class="token punctuation">.</span><span class="token function">string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token function-variable function">initialStateFactory</span> <span class="token operator">=</span> state <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    currentPage<span class="token operator">:</span> state<span class="token punctuation">.</span>currentPage <span class="token operator">??</span> <span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span>
+    pageState<span class="token operator">:</span> state<span class="token punctuation">.</span>pageState <span class="token operator">??</span> <span class="token punctuation">{</span>
+      pickAccountsPage<span class="token operator">:</span> <span class="token punctuation">{</span>
+        pickAccountsField<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      acceptRejectPage<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    flowParams<span class="token operator">:</span> state<span class="token punctuation">.</span>flowParams<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>The <code class="language-text">currentPage</code> contains the page key for the current page, and by default it is <code class="language-text">pickAccountsPage</code> for this flow. The <code class="language-text">pageState</code> is an aggregation of each flow page's fields' states. In this case, <code class="language-text">pickAccountsPage</code> has a <code class="language-text">pickAccountsField</code>, which is set to null. <code class="language-text">flowParams</code> is the initial data passed to the flow, which in this case is <code class="language-text">origin</code> (<code class="language-text">http://localhost:5174</code> in the screenshot).</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1311px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/449a492d8fa1b4097c40356e3a2c28a9/12470/zerotwo-flow-diagram.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVR42l2R2W7CMBBFLZoACXbiLasdQliDSqEq/f9fu524tBV9OLLkKx+N7zCtNQKKaCTabgXv0kBH1B1H3ueQROufs2rNIZ2CUQ8HwbRWCNClcRJjNcObYnjVDFc6BzeH2OdQuwxj+T+LkfU/wm8PU8ZAaUtCE4QnEl4kw5keXIhNS8JtBrkVOBWzcDdlk3hoSdjJIJwcE8z6E4rhA2XlUfUGYx3hal9wpy/dzAxbt4Q+WBRHjXMV4b2I8Em13DRlfgEzWNS1R727o/AjmLEFbFHSuBalz7HuW2z2N5Q0OY9n8F7AHCUJCZUgW86hRIp8EcO1KdRGwRobHJPrt0MlNaqO+tAJ+CqD4CvMowhVk6IYNyQskYkYyWIBzlMkcYSmSWhZjw6VCrDnLSvaMkdLksatwnTVOkN5GGC3NWUCzgnKeMjqXtCWqUP9t+UvcLStKEedXPAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Wallet request permissions flow diagram"
+        title=""
+        src="/static/449a492d8fa1b4097c40356e3a2c28a9/12470/zerotwo-flow-diagram.png"
+        srcset="/static/449a492d8fa1b4097c40356e3a2c28a9/fc2a6/zerotwo-flow-diagram.png 450w,
+/static/449a492d8fa1b4097c40356e3a2c28a9/1cfc2/zerotwo-flow-diagram.png 900w,
+/static/449a492d8fa1b4097c40356e3a2c28a9/12470/zerotwo-flow-diagram.png 1311w"
+        sizes="(max-width: 1311px) 100vw, 1311px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Wallet request permissions flow diagram</figcaption>
+  </figure></p>
+<p>Finally, page key needs to be mapped to a component for the UI to render. A page key is mapped to a component key in the flow template. In the rendering area of the code, the component key maps to a UI component.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> componentMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pickAccountsPage<span class="token operator">:</span> <span class="token punctuation">{</span> componentKey<span class="token operator">:</span> <span class="token string">"PickAccountsPage"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  acceptRejectPage<span class="token operator">:</span> <span class="token punctuation">{</span>
+    componentKey<span class="token operator">:</span> <span class="token string">"WalletRequestPermissionsAcceptRejectPage"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>All together, a flow template is defined like this:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> WalletRequestPermissionsFlow <span class="token operator">=</span> <span class="token punctuation">(</span>
+  state<span class="token operator">:</span> PartialFlowState<span class="token operator">&lt;</span>
+    WalletRequestPermissionsFlowPageState<span class="token punctuation">,</span>
+    <span class="token string">"WalletRequestPermissionsFlow"</span><span class="token punctuation">,</span>
+    WalletRequestPermissionsFlowFinishFlowData
+  <span class="token operator">></span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span>
+  <span class="token generic-function"><span class="token function">FlowTemplate</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+    WalletRequestPermissionsFlowPageState<span class="token punctuation">,</span>
+    <span class="token string">"WalletRequestPermissionsFlow"</span><span class="token punctuation">,</span>
+    WalletRequestPermissionsFlowTransitions<span class="token punctuation">,</span>
+    WalletRequestPermissionsFlowFinishFlowData
+  <span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token function">initialStateFactory</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">,</span> transitions<span class="token punctuation">,</span> componentMap<span class="token punctuation">)</span></code></pre></div>
+<p>To create a flow from a flow type and flow params using the above flow template:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> flowTypeToFlowClass <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletRequestPermissionsFlow<span class="token punctuation">]</span><span class="token operator">:</span> WalletRequestPermissionsFlow<span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletSwitchEthereumChainFlow<span class="token punctuation">]</span><span class="token operator">:</span> WalletSwitchEthereumChainFlow<span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>SignMessageFlow<span class="token punctuation">]</span><span class="token operator">:</span> SignMessageFlow<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">FlowTemplateFactory</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">createFlow</span><span class="token punctuation">(</span>flowParams<span class="token operator">:</span> FlowParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> flowTypeToFlowClass<span class="token punctuation">[</span>flowParams<span class="token punctuation">.</span>flowType<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token comment">// @ts-ignore</span>
+      flowParams<span class="token operator">:</span> flowParams<span class="token punctuation">.</span>params<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>What is a flow? I've intentionally removed generics from the Flow type below to make it easier to understand.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">Flow</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">createNew</span><span class="token operator">:</span> <span class="token punctuation">(</span>flowState<span class="token operator">:</span> FlowState<span class="token punctuation">)</span> <span class="token operator">=></span> Flow
+  <span class="token function-variable function">updateFieldState</span><span class="token operator">:</span> <span class="token punctuation">(</span>
+    page<span class="token operator">:</span> PageKey<span class="token punctuation">,</span>
+    field<span class="token operator">:</span> FieldKey<span class="token punctuation">,</span>
+    value<span class="token operator">:</span> PageState<span class="token punctuation">[</span>PageKey<span class="token punctuation">]</span><span class="token punctuation">[</span>FieldKey<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span> <span class="token operator">=></span> Flow
+  <span class="token function-variable function">transition</span><span class="token operator">:</span> <span class="token punctuation">(</span>page<span class="token operator">:</span> PageKey<span class="token punctuation">,</span> transition<span class="token operator">:</span> TransitionKeys<span class="token punctuation">[</span>PageKey<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=></span> Flow
+  <span class="token function-variable function">getCurrentPage</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> PageKey
+  <span class="token function-variable function">getComponentKey</span><span class="token operator">:</span> <span class="token punctuation">(</span>page<span class="token operator">:</span> PageKey<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">string</span>
+  <span class="token function-variable function">getState</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> FlowState
+<span class="token punctuation">}</span></code></pre></div>
+<p>A <code class="language-text">Flow</code>'s <code class="language-text">createNew</code> method takes in a <code class="language-text">FlowState</code> to create a <code class="language-text">Flow</code>. <code class="language-text">updateFieldState</code> updates the state of a field in a page. <code class="language-text">transition</code> executes a transition for a page, and updates the state according to the transitions defined in a <code class="language-text">FlowTemplate</code>. <code class="language-text">updateFieldState</code> and <code class="language-text">transition</code> do not mutate state, but instead return a <code class="language-text">Flow</code> with a transformed <code class="language-text">FlowState</code>. <code class="language-text">Flow</code> can be thought of as a set of helper methods on top of data/state (<code class="language-text">FlowState</code>). <code class="language-text">getCurrentPage</code>, <code class="language-text">getComponentKey</code>, and <code class="language-text">getState</code> are getters for parts or all of a <code class="language-text">FlowState</code>.</p>
+<p>A stripped-down <code class="language-text">PickAccountsPage</code> component looks like:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">PickAccountsPage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  flow<span class="token punctuation">,</span>
+  setFlow<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token operator">:</span> WalletRequestPermissionsFlowProps<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>chosenAccounts<span class="token punctuation">,</span> setChosenAccounts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>
+    <span class="token keyword">new</span> <span class="token class-name">Map<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">boolean</span><span class="token operator">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> flowState <span class="token operator">=</span> flow<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> origin <span class="token operator">=</span> flowState<span class="token punctuation">.</span>flowParams<span class="token punctuation">.</span>origin<span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      extRPCClient
+        <span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token string">"getActiveAccount"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> origin <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token function">ulid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"result"</span> <span class="token keyword">in</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">setChosenAccounts</span><span class="token punctuation">(</span>
+              <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span>
+                chosenAccounts<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>result<span class="token punctuation">.</span>accountId<span class="token punctuation">,</span> res<span class="token punctuation">.</span>result<span class="token punctuation">.</span>isPermitted<span class="token punctuation">)</span>
+              <span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>result<span class="token punctuation">.</span>isPermitted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">let</span> newFlow <span class="token operator">=</span> flow<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">updateFieldState</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+                <span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span>
+                <span class="token string">"pickAccountsField"</span>
+              <span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span> <span class="token string">"pickAccountsField"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+                res<span class="token punctuation">.</span>result<span class="token punctuation">.</span>accountId<span class="token punctuation">,</span>
+              <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">setFlow</span><span class="token punctuation">(</span>
+                newFlow
+                  <span class="token punctuation">.</span><span class="token function">transition</span><span class="token punctuation">(</span><span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span> <span class="token string">"pickAccounts"</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">.</span><span class="token function">transition</span><span class="token punctuation">(</span><span class="token string">"acceptRejectPage"</span><span class="token punctuation">,</span> <span class="token string">"accept"</span><span class="token punctuation">)</span>
+              <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>origin<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">onPickAccounts</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> accountsChosen <span class="token operator">=</span> <span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>chosenAccounts<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> e<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> e<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> newFlow <span class="token operator">=</span> flow<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">updateFieldState</span><span class="token generic class-name"><span class="token operator">&lt;</span>
+      <span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span>
+      <span class="token string">"pickAccountsField"</span>
+    <span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span> <span class="token string">"pickAccountsField"</span><span class="token punctuation">,</span> accountsChosen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    newFlow <span class="token operator">=</span> newFlow<span class="token punctuation">.</span><span class="token function">transition</span><span class="token punctuation">(</span><span class="token string">"pickAccountsPage"</span><span class="token punctuation">,</span> <span class="token string">"pickAccounts"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setFlow</span><span class="token punctuation">(</span>newFlow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">></span>Pick accounts<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+          <span class="token punctuation">{</span><span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>chosenAccounts<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>account<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>
+              <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>account<span class="token punctuation">}</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>input
+                  type<span class="token operator">=</span><span class="token string">"checkbox"</span>
+                  checked<span class="token operator">=</span><span class="token punctuation">{</span>chosenAccounts<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>account<span class="token punctuation">)</span><span class="token punctuation">}</span>
+                  onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span>
+                    <span class="token function">setChosenAccounts</span><span class="token punctuation">(</span>
+                      <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span>chosenAccounts<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>account<span class="token punctuation">,</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">></span>
+                <span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>splitAccountId<span class="token punctuation">.</span>accountAddress<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>onPickAccounts<span class="token punctuation">}</span><span class="token operator">></span>Pick accounts<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">flow</code> and <code class="language-text">setFlow</code> are populated by a custom <code class="language-text">useFlow</code> hook used in its parent component. All flows are launched in a new window, so the background script creates a flow by creating a new window with the popup type. The window has URL search params that are set to the <code class="language-text">FlowParams</code> of the flow.</p>
+<p>The <code class="language-text">FlowManager</code> initializes the flow from the <code class="language-text">flowParams</code>, the <code class="language-text">flowType</code>, and the <code class="language-text">flowId</code>. A <code class="language-text">flowId</code> is only known by the <code class="language-text">FlowManager</code> and the background script starting the flow. Flows themselves do not know about their <code class="language-text">flowId</code>.</p>
+<p>The <code class="language-text">useFlow</code> hook checks with the <code class="language-text">FlowManager</code> to see whether it should render an active flow, or if not, the extension homepage. When a flow is finished, a <code class="language-text">finishFlow</code> event is emitted, uniquely identified by the <code class="language-text">flowId</code>. The background script can associate this <code class="language-text">flowId</code> with the <code class="language-text">flowId</code> stored when creating the flow initially. The background script resolves a <code class="language-text">Promise</code> if the event returned is a <code class="language-text">finishFlow</code> event. It rejects the <code class="language-text">Promise</code> if the flow sends a <code class="language-text">flowTimeout</code> event after a certain period of time. From a product-focused developer's perspective, starting a flow and getting its <code class="language-text">finishFlowData</code> is very simple, since all the complexities are hidden behind the <code class="language-text">startFlow</code> function:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> finishFlowData <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">startFlow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  flowType<span class="token operator">:</span> FlowType<span class="token punctuation">.</span>enum<span class="token punctuation">.</span>WalletRequestPermissionsFlow<span class="token punctuation">,</span>
+  params<span class="token operator">:</span> <span class="token punctuation">{</span> origin <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<p>This framework acts as a FSM for flow state. It separates rendering and state, which allows a product-focused developer to easily reuse and test common flow page states. For example, the <code class="language-text">AcceptRejectPage</code> is very useful in a lot of flows, and the ability to tailor-make components for a flow, while keeping the state changes the same across flows allows for great code reusability.</p>
+<h2 id="conclusion" style="position:relative;"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>ZEROTWO opens up the possibility to rapidly implement collateral-free zero-integration rentals for many blockchains, while keeping iteration velocity high. The technical challenges faced in its implementation are not necessarily unique, but are fun to explore and iterate upon.</p></div></div></div></main><footer style="margin-left:auto;margin-right:auto;max-width:36rem;padding:2.25rem 1.125rem">© <!-- -->2024<!-- -->, Sean D&#x27;Souza</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/zerotwo/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-3eb02e135af24231bacf.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-3190381935a1ec39728b.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-acfdfda3d9099d800954.js\"],\"component---src-pages-cv-js\":[\"/component---src-pages-cv-js-31e7c4aa9cbca9461adc.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-fba9860776e80d59c97e.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-d5f49011a78baeffa98a.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="552d47930c752758c6ce";</script><script src="/webpack-runtime-007fa470df2c1f6ac06f.js" async></script><script src="/framework-85f485c0c15d5ec8ce40.js" async></script><script src="/app-3eb02e135af24231bacf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
