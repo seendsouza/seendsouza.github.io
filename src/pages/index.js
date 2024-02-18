@@ -46,8 +46,7 @@ const Home = ({ data }) => {
     {
       icon: "fa-paper",
       title: "Resume",
-      url:
-        "https://storage.googleapis.com/seendsouza-bucket-0/sean-dsouza-resume.pdf",
+      url: "https://storage.googleapis.com/seendsouza-bucket-0/sean-dsouza-resume.pdf",
       username: "Sean D'Souza",
     },
   ]
@@ -112,33 +111,35 @@ const Home = ({ data }) => {
           </h1>
           <h4>{localData.length} Links</h4>
           <SocialLinks data={localData} />
-          <hr />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>
-                    {node.frontmatter.date} • {node.timeToRead} min read
-                  </small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
+              <>
+                <hr />
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>
+                      {node.frontmatter.date} • {node.timeToRead} min read
+                    </small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              </>
             )
           })}
           <hr />

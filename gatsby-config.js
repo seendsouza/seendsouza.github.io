@@ -41,6 +41,15 @@ module.exports = {
               backgroundColor: `transparent`,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `12`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
         ],
       },
     },
